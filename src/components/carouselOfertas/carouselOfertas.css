@@ -1,0 +1,74 @@
+:root{
+    --color-Primary: #0275d8;
+    --bg-page: rgb(235, 235, 235);
+}
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  background-color: var(--bg-page);
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mySwiper{
+    min-height: fit-content;
+    margin-top: 20px;
+    margin-bottom: 50vh;
+    width: 88%;
+}
+
+.container-text-carousel{
+    margin-top: 7vh;
+    display: flex;
+}
+.container-text-carousel h3{
+    font-size: 2em;
+    color: gray;
+    font-weight: lighter;
+}
+
+.container-text-carousel a{
+    text-decoration: none;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}

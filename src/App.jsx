@@ -7,6 +7,9 @@ import { CartContext, CartContextProvider } from './context/Context'
 import { useContext } from 'react'
 import CartProducts from './components/cart/CartProducts'
 import Carousel from './components/carousel/Carousel.jsx'
+import PaysContainer from './components/paysContainer/PaysContainer.jsx'
+import CarouselOfertas from './components/carouselOfertas/CarouselOfertas'
+import Initial from './pages/Initial'
 
 function App() {
 
@@ -16,9 +19,9 @@ function App() {
       <BrowserRouter>
         <Navbar/>
         <Routes>
-        <Route path='' element={<Carousel/>} />
+        <Route path='' element={<Initial/>} />
+        <Route exact path='' element={<ItemListContainer/>} />
         {/* 
-          <Route exact path='' element={<ItemListContainer/>} />
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
         */}

@@ -4,9 +4,10 @@
 }
 
 .slide img {
+    min-height: 50vh;
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     transition: opacity 0.5s;
 }
 
