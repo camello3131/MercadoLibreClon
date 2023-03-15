@@ -1,59 +1,89 @@
 
 
-import React, { useRef, useState } from "react";
-// Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import { useState, useEffect } from "react";
+import { getFetch } from '../helpers/getFetch.js'
 
 import "./carouselOfertas.css";
+
+import ItemOfertas from "../ItemOfertas/ItemOfertas";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
 
+
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+
 export default function CarouselOfertas() {
+  const [loading, setLoading] = useState(true)
+  const [products, setProduct] = useState([])
+  const [ofertas, setOfertas] = useState([])
+
+  useEffect(() => {
+    getFetch()
+    .then ((res) => {
+        setProduct(res)
+        setOfertas(res.filter(product => product.descuento > 0))
+      })
+      .finally(() => {
+        setLoading(false)
+      })
+    }, [])
+
+    const responsive = {
+      superLargeDesktop: {
+        // the naming can be any, depends on you.
+        breakpoint: { max: 4000, min: 3000 },
+        items: 5,
+        slidesToSlide: 3 
+      },
+      desktop: {
+        breakpoint: { max: 3000, min: 1024 },
+        items: 5,
+        slidesToSlide: 5
+      },
+      tablet: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 3
+      },
+      mobile: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1
+      }
+    }
+      
+
   return (
     <>
-      <div className="container-text-carousel container">
-        <h3>Ofertas</h3>
-        <a href="">Ver todas</a>
-      </div>
-      <Swiper
-        slidesPerView={5}
-        spaceBetween={30}
-        slidesPerGroup={5}
-        loop={true}
-        loopFillGroupWithBlank={true}
-        pagination={{
-          clickable: false,
-        }}
-        navigation={true}
-        modules={[Pagination, Navigation]}
-        className="mySwiper container-fluid"
-      >
-        <SwiperSlide>
-          <div>
-            <div className="card" style={{width:"15rem"}}>
-              <img src="https://http2.mlstatic.com/D_Q_NP_641871-MLA41957572071_052020-AB.webp" className="card-img-top" alt="..."/>
-              <div className="card-body">
-                <p className="card-text"> descripcion del producto </p>
-              </div>
-            </div>
+      <div className="container-all-carousel">
+          <div className="section-header">
+            <h4>Ofertas</h4>
+            <a href="#">Ver mas</a>
           </div>
-        </SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-        <SwiperSlide>Slide 10</SwiperSlide>
-      </Swiper>
-    </>
+      {
+        loading? 
+        <div className='container spinner'>
+          <div className="spinner-border" role="status">
+              <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      :
+      <Carousel 
+      responsive={responsive}
+      keyBoardControl={true}
+      containerClass="carousel-container"
+      >
+        {ofertas.map(oferta => 
+        <ItemOfertas oferta={oferta} key={oferta.id}/>
+        )}
+      </Carousel>
+      }
+    </div>
+  </>
+
   );
 }

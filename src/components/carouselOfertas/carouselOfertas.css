@@ -2,73 +2,53 @@
     --color-Primary: #0275d8;
     --bg-page: rgb(235, 235, 235);
 }
-#app { height: 100% }
-html,
-body {
-  position: relative;
-  height: 100%;
-}
 
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   background-color: var(--bg-page);
-  margin: 0;
-  padding: 0;
 }
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+.section-header {
   -webkit-align-items: center;
   align-items: center;
+  display: -webkit-flex;
+  display: flex;
+  line-height: 1.2;
+  margin-bottom: 22px;
 }
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.container-all-carousel {
+  width: 1184px;
+  margin: auto auto;
 }
-.mySwiper{
-    min-height: fit-content;
-    margin-top: 20px;
-    margin-bottom: 50vh;
-    width: 88%;
+.section-header h2 {
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0 0 0 8px;
+  color: #666;
 }
-
-.container-text-carousel{
-    margin-top: 7vh;
-    display: flex;
+.section-header a {
+  font-size: 16px;
+  margin-bottom: 2px;
 }
-.container-text-carousel h3{
-    font-size: 2em;
-    color: gray;
-    font-weight: lighter;
+.section-header h2+a {
+  margin-left: 16px;
 }
-
-.container-text-carousel a{
-    text-decoration: none;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
+.section-header .ui-link, .section-header a {
+  -webkit-align-self: baseline;
+  align-self: baseline;
+  color: #3483fa;
+  font-size: 16px;
+  margin: auto 0 2px;
+  text-decoration: none;
+}
+.carousel-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+.carousel-container{
+  width: 1184px;
+  margin: auto auto;
+  display: flex;
+  justify-content: space-between;
 }
