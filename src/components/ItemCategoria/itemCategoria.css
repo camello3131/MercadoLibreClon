@@ -1,0 +1,28 @@
+.card-category{
+    height: 20vh;
+    width: 100%;
+    border: solid grey 1px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+}
+
+.row{
+    --bs-gutter-x: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.name-categories{
+    color: rgb(24, 23, 23);
+    font-size: .85rem ;
+    padding: 20px;
+}
+
+.img-categoria{
+    height: 60px;
+    fill: rgb(52, 131, 250) !important;
+}

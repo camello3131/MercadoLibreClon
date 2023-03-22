@@ -7,6 +7,7 @@ import CarouselOfertas from '../components/carouselOfertas/CarouselOfertas'
 import CarouselTiendas from '../components/carouselTiendas/CarouselTiendas'
 import CategoriesCarousel from '../components/CategoriesCarousel/CategoriesCarousel'
 import Discovery from '../components/discovery/Discovery'
+import Footer from '../components/Footer/Footer'
 import PaysContainer from '../components/paysContainer/PaysContainer'
 import Subscriptions from '../components/subscriptions/Subscriptions'
 
@@ -23,6 +24,7 @@ const Initial = () => {
         <CarouselTiendas/>
         <CardsInteres/>
         <CategoriesCarousel/>
+        <Footer/>
     </div>
   )
 }

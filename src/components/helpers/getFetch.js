@@ -653,9 +653,6 @@ export function getTiendas() {
     })
 }
 
-
-
-
 let product = {}
 export function getOneFetch(id) {
     product = productos.find(prod => prod.id === id)
@@ -673,37 +670,38 @@ export function getData() {
 /*----------------------Filtrado categorias------------------ */
 
 const imagenesCategorias = {
-    "Autos, motos y otros": "ruta/img",
-    "Computación": "asdasd",
-    "Electrodomésticos y Aires AC.": "asdasasd",
-    "Deportes y Fitness": "asdasd",
-    "Inmuebles" : "asdasd2",
-    "Belleza y cuidado personal" : "544545asd",
-    "Juegos y juguetes": "aasdasdfgwe",
-    "Celulares y Teléfonos" : "asdasdasd",
-    "Electrónica, audio y video": "asdasdasdasd",
-    "Hogar, Muebles y Jardín": "asdasdcvb",
-    "Accesorios para Vehículos" : "aasdascxcvxcv",
-    "Consolas y Videojuegos" : "asdasdzcvcx",
-    "Alimentos y Bebidas" : "efrsdfsdfds",
-    "Entradas para eventos" : "as65d56as5d6",
-    "Bebés" : "asdasdsd 5",
-    "Joyas y relojes" : "ASDASdasd",
-    "Libros, Revistas y Comics" : "asdasdasd",
-    "Animales y Mascotas" : "asdasdasd",
-    "Música, Películas y Series" : "asdasdasd",
-    "Arte, Librería y Mercería" : "asdasdasd",
-    "Herramientas" : "asdasdasd",
-    "Cámaras y Accesorios" : "asdasdasdrthyjytu",
-    "Industrias y Oficina" : "asdasdzzxc",
-    "Instrumentos Musicales" : "asdasdas",
-    "Antiguedades y Colecciones" : "asdasdasd",
-    "Salud y Equipamiento Médico" : "zxcvxcvxcv",
-    "Servicios": "asdasdascxz zxc",
-    "Agro" : "zxcz1212zx",
-    "Sourvenires, Cotillón y Fiestas": "asdasdas",
-    "Construcción": "ruta/img2",
-    "Otras Categorías": "ruta/img3"
+    "Autos, motos y otros": "/src/assets/svg/9647734231596026964.svg",
+    "Computación": "/src/assets/svg/4597722571594941564.svg",
+    "Electrodomésticos y Aires AC.": "/src/assets/svg/223505411667014858.svg",
+    "Deportes y Fitness": "/src/assets/svg/3782943391595759944.svg",
+    "Inmuebles" : "/src/assets/svg/12619743831600701942.svg",
+    "Belleza y cuidado personal" : "/src/assets/svg/12859160251577456578.svg",
+    "Juegos y juguetes": "/src/assets/svg/14069564021594722314.svg",
+    "Celulares y Teléfonos" : "/src/assets/svg/7442810861529659196.svg",
+    "Electrónica, audio y video": "/src/assets/svg/15822901291574330930.svg",
+    "Ropa y accesorios" : "/src/assets/svg/13372272811647527385.svg",
+    "Hogar, Muebles y Jardín": "/src/assets/svg/2708072991644410979.svg",
+    "Accesorios para Vehículos" : "/src/assets/svg/4348718321644665010.svg",
+    "Consolas y Videojuegos" : "/src/assets/svg/8767056901596027045.svg",
+    "Alimentos y Bebidas" : "/src/assets/svg/9721038191595501126.svg",
+    "Entradas para eventos" : "/src/assets/svg/20071902211595452646.svg",
+    "Bebés" : "/src/assets/svg/3170767291594722304.svg",
+    "Joyas y relojes" : "/src/assets/svg/1048020881548243702.svg",
+    "Libros, Revistas y Comics" : "/src/assets/svg/21286857451543238864.svg",
+    "Animales y Mascotas" : "/src/assets/svg/5444940171644664434.svg",
+    "Música, Películas y Series" : "/src/assets/svg/5023053441558095026.svg",
+    "Arte, Librería y Mercería" : "/src/assets/svg/48020015316345278494481.svg",
+    "Herramientas" : "/src/assets/svg/939214331599996366.svg",
+    "Cámaras y Accesorios" : "/src/assets/svg/3535154801543238865.svg",
+    "Industrias y Oficina" : "/src/assets/svg/8764298271544610474.svg",
+    "Instrumentos Musicales" : "/src/assets/svg/7674053961595501068.svg",
+    "Antiguedades y Colecciones" : "/src/assets/svg/8691163141544610482.svg",
+    "Salud y Equipamiento Médico" : "/src/assets/svg/19458208641595341165.svg",
+    "Servicios": "/src/assets/svg/19751791691579605507.svg",
+    "Agro" : "/src/assets/svg/11142807601595234895.svg",
+    "Sourvenires, Cotillón y Fiestas": "/src/assets/svg/15750679961553228274.svg",
+    "Construcción": "/src/assets/svg/11850110701595119108.svg",
+    "Otras Categorías": "/src/assets/svg/3214319516276482563764.svg"
   };
   
   export const categorias = productos.reduce((acc, producto) => {
