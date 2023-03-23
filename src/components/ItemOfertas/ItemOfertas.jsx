@@ -1,8 +1,11 @@
 import "./itemofertas.css"
+import { Link } from "react-router-dom"
 const ItemOfertas = ({oferta}) => {
+
   return (
     <>
         <div className="card">
+          <Link to={`/detalle/${oferta.id}`}> 
             <a href="#" className="enlace-container">
             <img src={oferta.img} className="card-img-top" alt="..."/>
             <div className="ui-item__content">
@@ -31,6 +34,7 @@ const ItemOfertas = ({oferta}) => {
               </div>
             </div>
             </a>
+          </Link>
           </div>
 
   </>

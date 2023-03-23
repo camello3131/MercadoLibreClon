@@ -4,6 +4,8 @@ import { ItemCount } from '../ItemCount/ItemCount'
 
 const ItemDetail = ({product}) => {
 
+  console.log(product)
+
     const styleCard = {
         width: "35rem",
         maxHeight: "300px"
@@ -17,20 +19,18 @@ const ItemDetail = ({product}) => {
 
     const {addToCart, cart} = useCartContext()
     function onAdd(cantidad) {
-      addToCart({...product, cantidad: cantidad})
-      console.log(cantidad)
+      addToCart({...product[0], cantidad: cantidad})
     }
     
-    console.log(cart)
   return (
     <div className='container d-flex' style={styleContainer}>
     <div className="card" style={styleCard}>
-    <img className="card-img-top" src={product.img} alt="Card image cap"/>
+    <img className="card-img-top" src={product[0].img} alt="Card image cap"/>
     <div className="card-body">
-        <h5 className="card-title text-center">{product.nombre} </h5>
-        <p className="card-text text-center"> {product.descripcion} </p>
-        <p className="card-text text-center"> Precio : $ {product.precio} </p>
-        <ItemCount stock={product.stock} initial={1} onAdd={onAdd}/>
+        <h5 className="card-title text-center">{product[0].nombre} </h5>
+        <p className="card-text text-center"> {product[0].descripcion} </p>
+        <p className="card-text text-center"> Precio : $ {product[0].precio} </p>
+        <ItemCount stock={product[0].stock} initial={1} onAdd={onAdd}/>
     </div>
     </div>
     </div>

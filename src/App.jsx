@@ -21,10 +21,8 @@ function App() {
         <Routes>
         <Route path='' element={<Initial/>} />
         <Route exact path='' element={<ItemListContainer/>} />
-        {/* 
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
-        */}
           <Route path='cart' element={<CartProducts/>} />
         </Routes>
       </BrowserRouter>

@@ -12,6 +12,7 @@ const CartProducts = () => {
         }
         </ul>
         <button onClick={removeCart}>Vaciar Carrito</button>
+        <button>Terminar Compra</button>
     </div>
     :
     <div>

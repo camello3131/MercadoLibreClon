@@ -2,7 +2,7 @@ import React from 'react'
 import "./itemTienda.css"
 
 const ItemTienda = ({tienda}) => {
-    console.log(tienda)
+
   return (
     <>
         <div className='container card-tienda-container'>

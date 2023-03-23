@@ -1,6 +1,6 @@
 const productos = [
     {
-        id: 1,
+        id: "1",
         nombre: "Chevrolet Tracker 1.2 Ltz Turbo At",
         categoria: "Autos, motos y otros",
         descripcion: "Chevrolet Tracker 1.2 Ltz Turbo At",
@@ -18,7 +18,7 @@ const productos = [
         ]
     },
     {
-        id: 2,
+        id: "2",
         nombre: "Notebook Asus X1502 Intel Core I5 1240p 16gb Ssd 480gb W11",
         categoria: "Computación",
         descripcion: "Notebook Asus X1502 Intel Core I5 1240p 16gb Ssd 480gb W11",
@@ -38,7 +38,7 @@ const productos = [
         ]
     },
     {
-        id: 3,
+        id: "3",
         nombre: "Aire acondicionado Philco  portátil  frío/calor 3010 frigorías blanco 220V PHP32HA3AN. Aire acondicionado Philco portátil frío/calor 3010 frigorías blanco 220V PHP32HA3AN",
         categoria: "Electrodomésticos y Aires AC.",
         descripcion: "Aire acondicionado Philco portátil frío/calor 3010 frigorías",
@@ -57,7 +57,7 @@ const productos = [
         ]
     },
     {
-        id: 4,
+        id: "4",
         nombre: "Zapatillas Topper Fast 0705 Dash 6 Csi",
         categoria: "Deportes y Fitness",
         descripcion: "Zapatillas Topper Fast 0705 Dash 6 Csi",
@@ -76,7 +76,7 @@ const productos = [
         ]
     },
     {
-        id: 5,
+        id: "5",
         nombre: "Dpto. En Venta. 3 Dorm. Cochera. Complejo Sureño. Barrio Jardín",
         categoria: "Inmuebles",
         descripcion: "Dpto. En Venta. 3 Dorm. Cochera. Complejo Sureño. Barrio Jardín",
@@ -94,7 +94,7 @@ const productos = [
         ]
     },
     {
-        id: 6,
+        id: "6",
         nombre: "Umbrella Intelligent Spf 99 Dna Defense Protector Solar",
         categoria: "Belleza y cuidado personal",
         descripcion: "Umbrella Intelligent Spf 99 Dna Defense Protector Solar",
@@ -111,7 +111,7 @@ const productos = [
         ]
     },
     {
-        id: 7,
+        id: "7",
         nombre: "Pileta Lona Caño Infantil Niños Mor 400 Litros Verano Nueva",
         categoria: "Juegos y juguetes",
         descripcion: "Pileta Lona Caño Infantil Niños Mor 400 Litros Verano Nueva",
@@ -124,7 +124,7 @@ const productos = [
         }
     },
     {
-        id: 8,
+        id: "8",
         nombre: "Samsung Galaxy A04 128 GB negro 4 GB RAM",
         categoria: "Celulares y Teléfonos",
         descripcion: "Samsung Galaxy A04 128 GB negro 4 GB RAM",
@@ -145,7 +145,7 @@ const productos = [
         ]
     },
     {
-        id: 9,
+        id: "9",
         nombre: "Smart TV Kodak WE-32MT005 LED HD 32",
         categoria: "Electrónica, audio y video",
         descripcion: "Smart TV Kodak WE-32MT005 LED HD 32",
@@ -158,7 +158,7 @@ const productos = [
         }
     },
     {
-        id: 10,
+        id: "10",
         nombre: "Zapatilla Nike",
         categoria: "Ropa y accesorios",
         descripcion: "Deportiva",
@@ -171,7 +171,7 @@ const productos = [
         }
     },
     {
-        id: 11,
+        id: "11",
         nombre: "Mueble Mesa Auxiliar De Cocina Rack Puerta Microondas Oferta",
         categoria: "Hogar, Muebles y Jardín",
         descripcion: "Mueble Mesa Auxiliar De Cocina Rack Puerta Microondas Oferta",
@@ -189,7 +189,7 @@ const productos = [
         ]
     },
     {
-        id: 12,
+        id: "12",
         nombre: "Neumático Pirelli P400 EVO P 185/70R14 88 H",
         categoria: "Accesorios para Vehículos",
         descripcion: "Neumático Pirelli P400 EVO P 185/70R14 88 H",
@@ -203,7 +203,7 @@ const productos = [
         ]
     },
     {
-        id: 13,
+        id: "13",
         nombre: "Microsoft Xbox Series S 512GB Standard color blanco",
         categoria: "Consolas y Videojuegos",
         descripcion: "Microsoft Xbox Series S 512GB Standard color blanco",
@@ -217,7 +217,7 @@ const productos = [
         ]
     },
     {
-        id: 14,
+        id: "14",
         nombre: "Vino Nicolas Catena Zapata Blend Caja X 6un - Enotek",
         categoria: "Alimentos y Bebidas",
         descripcion: "Vino Nicolas Catena Zapata Blend Caja X 6un - Enotek",
@@ -231,7 +231,7 @@ const productos = [
         ]
     },
     {
-        id: 15,
+        id: "15",
         nombre: "Entrada Usada Soda Stereo Despedida 2007 Me Verás Volver",
         categoria: "Entradas para eventos",
         descripcion: "Entrada Usada Soda Stereo Despedida 2007 Me Verás Volver",
@@ -242,7 +242,7 @@ const productos = [
         imagenes: "https://http2.mlstatic.com/D_NQ_NP_2X_878926-MLA54290213582_032023-F.webp"
     },
     {
-        id: 16,
+        id: "16",
         nombre: "Cochecito Para Bebé Rainbow Dinamic Gris Chasis Negro",
         categoria: "Bebés",
         descripcion: "Cochecito Para Bebé Rainbow Dinamic Gris Chasis Negro",
@@ -256,7 +256,7 @@ const productos = [
         ]
     },
     {
-        id: 17,
+        id: "17",
         nombre: "Samsung Galaxy Watch5 Pro (Bluetooth) 1.4 caja 45mm de titanio black titanium, malla black titanium y bisel black titanium SM-R920",
         categoria: "Joyas y relojes",
         descripcion: "Samsung Galaxy Watch5 Pro",
@@ -271,7 +271,7 @@ const productos = [
         ]
     },
     {
-        id: 18,
+        id: "18",
         nombre: "Principios De Economia Mankiw Cengage Oficial E/ En El Día",
         categoria: "Libros, Revistas y Comics",
         descripcion: "Principios De Economia Mankiw Cengage Oficial E/ En El Día",
@@ -285,7 +285,7 @@ const productos = [
         ]
     },
     {
-        id: 19,
+        id: "19",
         nombre: "Bomba Rs942 1000 L/h 2mt Hidroponia Estanques Peceras Envios",
         categoria: "Animales y Mascotas",
         descripcion: "Bomba Rs942 1000 L/h 2mt Hidroponia Estanques Peceras",
@@ -298,7 +298,7 @@ const productos = [
         ]
     },
     {
-        id: 20,
+        id: "20",
         nombre: "Tini Cupido Cd Nuevo Cerrado Original 2023",
         categoria: "Música, Películas y Series",
         descripcion: "Tini Cupido Cd",
@@ -311,7 +311,7 @@ const productos = [
         ]
     },
     {
-        id: 21,
+        id: "21",
         nombre: "Calculadora Cientifica Casio Fx-82ms Garantia Oficial 2 Años",
         categoria: "Arte, Librería y Mercería",
         descripcion: "Calculadora Cientifica Casio Fx-82ms",
@@ -326,7 +326,7 @@ const productos = [
         ]
     },
     {
-        id: 22,
+        id: "22",
         nombre: "Taladro percutor eléctrico de 13mm Philco TP711 710W + accesorios 220V",
         categoria: "Herramientas",
         descripcion: "Taladro percutor eléctrico de 13mm Philco",
@@ -339,7 +339,7 @@ const productos = [
         ]
     },
     {
-        id: 23,
+        id: "23",
         nombre: "Gimbal Gadnic G200 Pro Estabilizador Camara Celular Fotos",
         categoria: "Cámaras y Accesorios",
         descripcion: "Gimbal Gadnic G200 Pro Estabilizador",
@@ -352,7 +352,7 @@ const productos = [
         ]
     },
     {
-        id: 24,
+        id: "24",
         nombre: "Silla de escritorio Baires4 Ejecutiva cuero sintético",
         categoria: "Industrias y Oficina",
         descripcion: "Silla de escritorio Baires4 Ejecutiva cuero sintético",
@@ -366,7 +366,7 @@ const productos = [
         ]
     },
     {
-        id: 25,
+        id: "25",
         nombre: "Guitarra Electrocriolla C/ Corte Acustica Funda Pua Colores",
         categoria: "Instrumentos Musicales",
         descripcion: "Guitarra Electrocriolla C/ Corte Acustica Funda Pua Colores",
@@ -382,7 +382,7 @@ const productos = [
         ]
     },
     {
-        id: 26,
+        id: "26",
         nombre: "Tocadiscos Winco W408 marrón con Bluetooth",
         categoria: "Antiguedades y Colecciones",
         descripcion: "Tocadiscos Winco W408 marrón con Bluetooth",
@@ -395,7 +395,7 @@ const productos = [
         ]
     },
     {
-        id: 27,
+        id: "27",
         nombre: "Tensiómetro digital de brazo automático Femmto YK-BPA2",
         categoria: "Salud y Equipamiento Médico",
         descripcion: "Tensiómetro digital de brazo automático Femmto YK-BPA2",
@@ -413,7 +413,7 @@ const productos = [
         ]
     },
     {
-        id: 28,
+        id: "28",
         nombre: "Construcción De Vagones Cabañas Estilo Antiguo De Madera",
         categoria: "Servicios",
         descripcion: "Construcción De Vagones Cabañas Estilo Antiguo De Madera",
@@ -429,7 +429,7 @@ const productos = [
         ]
     },
     {
-        id: 29,
+        id: "29",
         nombre: "Cargador Frontal Iron 930s (1m3) - 87hp (2023) Dolar Oficial",
         categoria: "Agro",
         descripcion: "Cargador Frontal Iron 930s (1m3) - 87hp (2023) Dolar Oficial",
@@ -445,7 +445,7 @@ const productos = [
         ]
     },
     {
-        id: 30,
+        id: "30",
         nombre: "Dc Disfraz Flash Clasico Talle 1 Int 1670-1 Vulcanita",
         categoria: "Sourvenires, Cotillón y Fiestas",
         descripcion: "Dc Disfraz Flash Clasico",
@@ -458,7 +458,7 @@ const productos = [
         ]
     },
     {
-        id: 31,
+        id: "31",
         nombre: "Puerta De Chapa Inyectada Doble 80x2 Apliques Y Barral 75cm",
         categoria: "Construcción",
         descripcion: "Puerta De Chapa Inyectada Doble 80x2",
@@ -473,7 +473,7 @@ const productos = [
         ]
     },
     {
-        id: 32,
+        id: "32",
         nombre: "Trezor One Billetera Criptomonedas Hardware Wallet Btc-eth",
         categoria: "Otras Categorías",
         descripcion: "Trezor One Billetera Criptomonedas",
@@ -580,7 +580,7 @@ const tiendas = [
         min3: "https://http2.mlstatic.com/D_Q_NP_842627-MLA50338677485_062022-R.webp"
     },
     {   
-        id: 11,
+        id: "11",
         imgBack: "https://http2.mlstatic.com/storage/official-stores-images/samsung/background_home201902190516.jpg",
         imgLogo: "https://http2.mlstatic.com/D_Q_NP_869939-MLA28051336464_082018-AE.webp",
         nombre: "Samsung",

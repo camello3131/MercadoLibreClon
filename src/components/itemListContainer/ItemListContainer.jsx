@@ -12,14 +12,14 @@ const ItemListContainer = ({categoriaId}) => {
     const [products, setProduct] = useState([])
     const params = useParams()
 
-    useEffect(() => {
-        getFetch()
-        .then ((res) => {
-            setProduct(res)
-        })
-        .finally(() => {
-            setLoading(false)
-        })
+  useEffect(() => {
+    getFetch()
+    .then ((res) => {
+        setProduct(res)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
     }, [])
     
     return (
