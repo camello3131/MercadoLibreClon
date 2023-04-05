@@ -10,6 +10,7 @@ import Carousel from './components/carousel/Carousel.jsx'
 import PaysContainer from './components/paysContainer/PaysContainer.jsx'
 import CarouselOfertas from './components/carouselOfertas/CarouselOfertas'
 import Initial from './pages/Initial'
+import Added from './components/Added/Added'
 
 function App() {
 
@@ -23,7 +24,8 @@ function App() {
         <Route exact path='' element={<ItemListContainer/>} />
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
-          <Route path='cart' element={<CartProducts/>} />
+          <Route path='/cart' element={<CartProducts/>} />
+          <Route path='/addedproduct/:Id' element={<Added/>}/>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>

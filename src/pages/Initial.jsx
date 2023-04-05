@@ -10,6 +10,7 @@ import Discovery from '../components/discovery/Discovery'
 import Footer from '../components/Footer/Footer'
 import PaysContainer from '../components/paysContainer/PaysContainer'
 import Subscriptions from '../components/subscriptions/Subscriptions'
+import FooterContainer from '../components/FooterContainer/FooterContainer'
 
 const Initial = () => {
   return (
@@ -24,7 +25,7 @@ const Initial = () => {
         <CarouselTiendas/>
         <CardsInteres/>
         <CategoriesCarousel/>
-        <Footer/>
+        <FooterContainer/>
     </div>
   )
 }

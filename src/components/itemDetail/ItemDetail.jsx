@@ -2,10 +2,24 @@ import "./ItemDetal.css"
 import { useCartContext } from '../../context/Context'
 import { categorias } from '../helpers/getFetch'
 import { ItemCount } from '../ItemCount/ItemCount'
+import AdnArea from '../adn-Area/AdnArea.jsx'
+import Footer from '../Footer/Footer.jsx'
+import { Link } from "react-router-dom"
+import React, { useState, useEffect } from "react";
 
 const ItemDetail = ({product}) => {
 
-  console.log(product)
+
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/comments")
+      .then((response) => response.json())
+      .then((data) => setComments(data));
+  }, []);
+
+  console.log(comments)
+
 
     const styleCard = {
         width: "35rem",
@@ -25,7 +39,62 @@ const ItemDetail = ({product}) => {
     
   return (
     <>
-      <div className='ui-pdp-container ui-pdp-container--pdp'>
+    <div className="ui-pdp-container ui-pdp-container--top">
+      <div className="ui-pdp-container__row">
+        <div className="ui-pdp-container__col col-5 ui-pdp-container--breadcrumb-related">
+          <div className="ui-pdp-related-search">
+            <ul className="ui-pdp-related-search__list">
+              <li className="ui-pdp-related-search__item ui-pdp-related-search__item-title"> También puede interesarte: </li>
+              <li className="ui-pdp-related-search__item">
+                <a href="">tcl tab 10s</a>
+              </li>
+              <li className="ui-pdp-related-search__item">
+                <a href="">tablet samsung s8</a>
+              </li>
+              <li className="ui-pdp-related-search__item">
+                <a href="">tablet telefono</a>
+              </li>
+            </ul>
+          </div>
+          <div className="ui-pdp-container__row ui-pdp-container__row--breadcrumb">
+            <div className="ui-pdp-breadcrumb">
+              <a href="" className="ui-pdp-breadcrumb__link">Volver</a>
+              <nav>
+                <ol className="andes-breadcrumb">
+                  <li className="andes-breadcrumb__item">
+                    <a href="" className="andes-breadcrumb__link">Tablets</a>
+                    <div className="andes-breadcrumb__chevron"></div>
+                  </li>
+                  <li className="andes-breadcrumb__item">
+                    <a href="" className="andes-breadcrumb__link">Computación</a>
+                    <div className="andes-breadcrumb__chevron"></div>
+                  </li>
+                  <li className="andes-breadcrumb__item">
+                    <a href="" className="andes-breadcrumb__link">Tablets y Accesorios</a>
+                    <div className="andes-breadcrumb__chevron"></div>
+                  </li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div className="ui-pdp-container__col col-2 ui-pdp-container--share">
+          <div className="ui-pdp-share">
+            <div className="andes-tooltip__trigger">
+              <button className="andes-button ui-pdp-share__link__label andes-button--small andes-button--transparent">
+                <span className="andes-button__content">Compartir</span>
+              </button>
+            </div>
+          </div>
+          <div className="ui-pdp-syi">
+            <a href="" className="ui-pdp-syi__link">Vender uno igual</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div className='ui-pdp-container ui-pdp-container--pdp container'>
         <div className='ui-pdp-container__row ui-pdp--relative ui-pdp-with--separator--fluid pb-40'>
           <div className='ui-pdp-container__col col-3 ui-pdp-container--column-center pb-40'>
             <div className='ui-pdp--sticky-wrapper ui-pdp--sticky-wrapper-center' style={{top: "-2015px"}}>
@@ -240,30 +309,7 @@ const ItemDetail = ({product}) => {
                     Stock disponible
                     </p>
                   </div>
-                  <div className='ui-pdp-buybox__quantity mb-12'>
-                    <div className='andes-tooltip__trigger'>
-                      <button type='button' className='andes-button ui-pdp-buybox__quantity__trigger andes-button--large andes-button--transparent' id="quantity-selector">
-                        <span className='andes-button__content'>
-                          <span className='ui-pdp-buybox__quantity__title'>Cantidad:</span>
-                          <span className='ui-pdp-buybox__quantity__selected'>1 unidad</span>
-                          <span className='ui-pdp-buybox__quantity__chevron'></span>
-                          <span className='ui-pdp-buybox__quantity__available'>
-                            {product[0].stock} disponibles
-                          </span>
-                        </span>
-                      </button>
-                    </div>
-                  </div>
-                  <div className='ui-pdp-actions'>
-                    <div className='ui-pdp-actions__container'>
-                      <button className='andes-button andes-spinner__icon-base andes-button--loud'>
-                        <span className='andes-button__content'>Comprar ahora</span>
-                      </button>
-                      <button className='andes-button andes-spinner__icon-base andes-button--quiet'>
-                        <span className='andes-button__content'>Agregar al carrito</span>
-                      </button>
-                    </div>
-                  </div>
+                    <ItemCount stock={product[0].stock} initial={1} onAdd={onAdd} product={product[0]} />
                   <ul className='ui-pdp-benefits mt-24'>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
@@ -496,22 +542,114 @@ const ItemDetail = ({product}) => {
           <div className='ui-pdp-container__col col-3'></div>
           <div className='ui-pdp-container__col col-1 ui-pdp-container--column-right mt-40'></div>
         </div>
+        <div className="ui-pdp-container__row">
+          <div className="ui-pdp-container__col col-3">
+            <div className="ui-pdp-container__row">
+              <div className="ui-pdp-container__col col-1 ui-pdp-with--separator ui-pdp-with--separator--40">
+                <div className="ui-pdp-qadb pl-45 pr-45 mb-48">
+                  <h2 className="ui-pdp-qadb__title">Preguntas y respuestas</h2>
+                  <div className="ui-pdp-quick-access__container">
+                    <h3 className="ui-pdp-questions__subtitle">¿Qué querés saber?</h3>
+                    <div className="ui-pdp-questions__list-container">
+                      <ul className="ui-pdp-questions__list">
+                        <li className="ui-pdp-questions__item">
+                          <div className="ui-pdp-action-modal">
+                            <div className="andes-tooltip__trigger">
+                              <a href="" className="ui-pdp-action-modal__link andes-button andes-button--quiet andes-button--medium ui-pdp-questions__link">Costo y tiempo de envío</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="ui-pdp-questions__item">
+                          <div className="ui-pdp-action-modal">
+                            <div className="andes-tooltip__trigger">
+                              <a href="" className="ui-pdp-action-modal__link andes-button andes-button--quiet andes-button--medium ui-pdp-questions__link">Devoluciones gratis</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="ui-pdp-questions__item">
+                          <div className="ui-pdp-action-modal">
+                            <div className="andes-tooltip__trigger">
+                              <a href="" className="ui-pdp-action-modal__link andes-button andes-button--quiet andes-button--medium ui-pdp-questions__link">Medios de pago y promociones</a>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="ui-pdp-questions__item">
+                          <div className="ui-pdp-action-modal">
+                            <div className="andes-tooltip__trigger">
+                              <a href="" className="ui-pdp-action-modal__link andes-button andes-button--quiet andes-button--medium ui-pdp-questions__link">Garantía</a>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                      <div className="questionTooltip">
+                        <div>
+                          <p className="ui-pdp-questions__tooltip__primary">¿Tenés dudas?</p>
+                        </div>
+                        <span className="ui-pdp-questions__tooltip__close"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="ui-pdp-qadb__search-bar">
+                    <h3 className="ui-pdp-color--BLACK ui-pdp-size--MEDIUM ui-pdp-family--SEMIBOLD ui-pdp-search-bar__title">Buscá lo que querés saber</h3>
+                    <form action="" className="">
+                      <div className="ui-pdp-qadb__search-bar__input-container">
+                        <div className="andes-form-control andes-form-control--textfield andes-form-control--default ui-pdp-qadb__search-bar__input">
+                          <label htmlFor="" style={{width: "100%"}} >
+                            <div className="andes-form-control__control">
+                              <input type="text" className="andes-form-control__field" placeholder="Escribí una pregunta o palabra clave..." />
+                            </div>
+                          </label>
+                          <div className="andes-form-control__bottom">
+                            <span className="andes-form-control__message"></span>
+                          </div>
+                        </div>
+                        <button className="ui-pdp-qadb__search-bar__search">
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div className="ui-pdp-qadb__questions-list">
+                    <h3 className="ui-pdp-color--BLACK ui-pdp-size--MEDIUM ui-pdp-family--SEMIBOLD ui-pdp-qadb__questions-list__title">
+                    Últimas realizadas
+                    </h3>
+                    <div className="ui-pdp-qadb__questions-list__wraper">
+                      <div className="ui-pdp-qadb__questions-list__question">
+                        <div className="ui-pdp-qadb__questions-list__question__container">
+                          <span className="ui-pdp-color--BLACK ui-pdp-size--SMALL ui-pdp-family--REGULAR ui-pdp-qadb__questions-list__question__label"></span>
+                          <a href="" className="ui-pdp-size--XSMALL ui-pdp-family--REGULAR ui-pdp-qadb__questions-list__question-item__denounce">Denunciar</a>
+                        </div>
+                        <div className="ui-pdp-qadb__questions-list__question__answer-container">
+                          <div>
+                            <div className="ui-pdp-qadb__questions-list__container-answer__isNoCollapsed">
+                              <span className="ui-pdp-color--GRAY ui-pdp-size--SMALL ui-pdp-family--REGULAR ui-pdp-qadb__questions-list__answer-item__answer">RESPUESTA DEL VENDEDOR</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <button className="andes-button ui-pdp-qadb__questions-list__see-more andes-button--large andes-button--transparent">
+                        <span className="andes-button__content">
+                          <p className="ui-pdp-color--BLUE ui-pdp-size--SMALL ui-pdp-family--SEMIBOLD ui-pdp-qadb__questions-list__see-more__link">
+                          Ver 7 resultados más
+                          </p>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+                  <button className="andes-button ui-pdp-qadb__how-to-make-question-button andes-button--large andes-button--quiet">
+                          <span className="andes-button__content">
+                            <span className="andes-button__text">¿Cómo le pregunto al vendedor?</span>
+                          </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div className="ui-pdp-container__row"></div>
+          </div>
+        </div>
       </div>
-    
-
-
-
-    <div className='container d-flex' style={styleContainer}>
-    <div className="card" style={styleCard}>
-    <img className="card-img-top" src={product[0].img} alt="Card image cap"/>
-    <div className="card-body">
-        <h5 className="card-title text-center">{product[0].nombre} </h5>
-        <p className="card-text text-center"> {product[0].descripcion} </p>
-        <p className="card-text text-center"> Precio : $ {product[0].precio} </p>
-        <ItemCount stock={product[0].stock} initial={1} onAdd={onAdd}/>
-    </div>
-    </div>
-    </div>
+      <AdnArea/>
+      <Footer/>
     </>
 
 
