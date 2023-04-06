@@ -1,0 +1,22 @@
+#comentsListContainer{
+    display: none;
+}
+#comentsListContainer:first-child{
+    display: block;
+}
+
+#comentsListContainer.show {
+    display: block;
+}
+
+.commentsList .ui-pdp-qadb__questions-list__question__container:hover .ui-pdp-qadb__questions-list__question-item__denounce {
+    display: inline;
+}
+.ui-pdp-qadb__questions-list__question__answer-container:hover .ui-pdp-qadb__questions-list__question-item__denounce {
+    display: inline;
+}
+.ui-pdp-qadb__questions-list__question-item__denounce {
+    display: none;
+}
+
+

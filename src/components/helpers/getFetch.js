@@ -15,7 +15,10 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_715701-MLA54367559194_032023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_807749-MLA54367519370_032023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_727556-MLA54366166865_032023-F.webp"
-        ]
+        ],
+        comments: [
+            4, 36, 65, 105, 203, 48, 59, 87, 22
+        ] 
     },
     {
         id: "2",
@@ -35,6 +38,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_748509-MLA52161815268_102022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_789166-MLA52161815259_102022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_948609-MLA52161792388_102022-F.webp"
+        ],
+        comments: [
+            205, 88, 95, 450, 300, 266, 155, 136, 111, 85, 83
         ]
     },
     {
@@ -54,6 +60,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_648290-MLA44292499958_122020-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_924028-MLA44292499957_122020-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_812431-MLA44292716761_122020-F.webp"
+        ],
+        comments: [
+            14, 136, 165, 105, 103, 148, 159, 187, 122
         ]
     },
     {
@@ -73,6 +82,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_911138-MLA52623226714_112022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_944721-MLA52623184984_112022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_783731-MLA52623213821_112022-F.webp"
+        ],
+        comments: [
+            24, 236, 265, 215, 203, 248, 259, 227, 222
         ]
     },
     {
@@ -91,6 +103,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_781734-MLA54357436925_032023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_756144-MLA54357437165_032023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_803820-MLA54357437399_032023-F.webp"
+        ],
+        comments: [
+            34, 336, 365, 305, 303, 348, 359, 387, 322
         ]
     },
     {
@@ -108,6 +123,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_723009-MLA48078103370_102021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_786655-MLA48078119149_102021-F.webp"
+        ],
+        comments: [
+            44, 436, 465, 405, 403, 448, 459, 487, 422
         ]
     },
     {
@@ -121,7 +139,10 @@ const productos = [
         descuento: 10,
         beneficios: {
             MismoPrecio: 6
-        }
+        },
+        comments: [
+            124, 156, 155, 135, 113, 118, 9, 7, 2
+        ]
     },
     {
         id: "8",
@@ -142,6 +163,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_989252-MLA53225323332_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_900313-MLA53225323331_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_825557-MLA53225354135_012023-F.webp"
+        ],
+        comments: [
+            3, 16, 25, 205, 103, 68, 29, 37, 12
         ]
     },
     {
@@ -155,7 +179,10 @@ const productos = [
         descuento: 20,
         beneficios: {
             full: "full"
-        }
+        },
+        comments: [
+            11, 31, 25, 85, 23, 17, 19, 86, 122
+        ]
     },
     {
         id: "10",
@@ -168,7 +195,10 @@ const productos = [
         descuento: 10,
         beneficios: {
             EnvioGratis: "Envio Gratis"
-        }
+        },
+        comments: [
+            54, 56, 55, 35, 103, 128, 239, 383, 352
+        ]
     },
     {
         id: "11",
@@ -186,6 +216,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_634033-MLA50925885235_072022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_888084-MLA50925885236_072022-F.webp",
 
+        ],
+        comments: [
+            184, 166, 245, 65, 23, 4, 39, 167, 155
         ]
     },
     {
@@ -200,6 +233,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_790043-MLA49851727153_052022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_735729-MLA49851655941_052022-F.webp"
+        ],
+        comments: [
+            34, 6, 415, 215, 233, 218, 369, 197, 37
         ]
     },
     {
@@ -214,6 +250,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_951418-MLA44484230441_012021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_903686-MLA44484230439_012021-F.webp"
+        ],
+        comments: [
+            334, 323, 221, 123, 3, 4, 5, 7, 45
         ]
     },
     {
@@ -228,6 +267,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_958287-MLA49421133894_032022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_661146-MLA49389303436_032022-F.webp"
+        ],
+        comments: [
+            43, 363, 153, 103, 33, 43, 53, 83, 23
         ]
     },
     {
@@ -239,7 +281,10 @@ const productos = [
         precio: 35000,
         stock: 10,
         descuento: 0,
-        imagenes: "https://http2.mlstatic.com/D_NQ_NP_2X_878926-MLA54290213582_032023-F.webp"
+        imagenes: "https://http2.mlstatic.com/D_NQ_NP_2X_878926-MLA54290213582_032023-F.webp",
+        comments: [
+            44, 364, 64, 54, 234, 484, 54, 84, 24
+        ]
     },
     {
         id: "16",
@@ -253,6 +298,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_853435-MLA53441844441_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_962799-MLA53441761894_012023-F.webp"
+        ],
+        comments: [
+            45, 365, 55, 155, 235, 45, 55, 85, 25
         ]
     },
     {
@@ -268,6 +316,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_936069-MLA51439791973_092022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_861532-MLA51439857424_092022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_678910-MLA51439857425_092022-F.webp"
+        ],
+        comments: [
+            46, 36, 66, 106, 206, 46, 56, 86, 26
         ]
     },
     {
@@ -282,6 +333,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_981346-MLA45042639567_032021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_698656-MLA45043435982_032021-F.webp"
+        ],
+        comments: [
+            47, 37, 67, 107, 207, 47, 57, 17, 27
         ]
     },
     {
@@ -295,6 +349,9 @@ const productos = [
         descuento: 0,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_863939-MLA26684514149_012018-F.webp",
+        ],
+        comments: [
+            48, 38, 68, 108, 208, 188, 58, 88, 28
         ]
     },
     {
@@ -308,6 +365,9 @@ const productos = [
         descuento: 0,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_688466-MLA54127000860_032023-F.webp",
+        ],
+        comments: [
+            49, 39, 69, 109, 209, 49, 159, 89, 29
         ]
     },
     {
@@ -323,6 +383,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_846581-MLA49379017541_032022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_962282-MLA45320146478_032021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_672748-MLA44245889054_122020-F.webp"
+        ],
+        comments: [
+            40, 360, 650, 100, 200, 480, 489, 70, 20
         ]
     },
     {
@@ -336,6 +399,9 @@ const productos = [
         descuento: 20,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_635184-MLA50496909423_062022-F.webp"
+        ],
+        comments: [
+            110, 50, 60, 80, 407, 60, 340, 410, 90, 40, 82
         ]
     },
     {
@@ -349,6 +415,9 @@ const productos = [
         descuento: 0,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_605462-MLA54247704389_032023-F.webp",
+        ],
+        comments: [
+            111, 151, 162, 181, 147, 166, 134, 141, 197, 154, 18
         ]
     },
     {
@@ -363,6 +432,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_774850-MLA43495940257_092020-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_998448-MLA43495940327_092020-F.webp"
+        ],
+        comments: [
+            24, 236, 265, 205, 202, 248, 259, 287, 222
         ]
     },
     {
@@ -379,6 +451,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_715431-MLA48454085636_122021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_914399-MLA47340746917_092021-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_917102-MLA47340772825_092021-F.webp"
+        ],
+        comments: [
+            34, 336, 365, 305, 303, 348, 359, 387, 322
         ]
     },
     {
@@ -392,6 +467,9 @@ const productos = [
         descuento: 0,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_702402-MLA41241337976_032020-F.webp"
+        ],
+        comments: [
+            44, 436, 465, 405, 403, 448, 459, 487, 422
         ]
     },
     {
@@ -410,6 +488,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_693249-MLA53541850354_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_828089-MLA53541850356_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_790302-MLA53541850357_012023-F.webp"
+        ],
+        comments: [
+            45, 365, 155, 152, 205, 45, 55, 85, 25
         ]
     },
     {
@@ -426,6 +507,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_648371-MLA49396449014_032022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_987642-MLA49396040959_032022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_697523-MLA49396449015_032022-F.webp"
+        ],
+        comments: [
+            46, 366, 166, 165, 263, 468, 56, 68, 262
         ]
     },
     {
@@ -442,6 +526,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_600004-MLA53250782101_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_749689-MLA53250740179_012023-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_841675-MLA53250775088_012023-F.webp"
+        ],
+        comments: [
+            47, 376, 267, 157, 237, 487, 297, 77, 27
         ]
     },
     {
@@ -455,6 +542,9 @@ const productos = [
         descuento: 0,
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_807910-MLA47683039085_092021-F.webp"
+        ],
+        comments: [
+            48, 368, 58, 185, 283, 488, 98, 88, 28
         ]
     },
     {
@@ -470,6 +560,9 @@ const productos = [
             "https://http2.mlstatic.com/D_NQ_NP_2X_977650-MLA52042578298_102022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_706639-MLA52042543440_102022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_675015-MLA52042483626_102022-F.webp"
+        ],
+        comments: [
+            49, 369, 95, 195, 293, 489, 59, 89, 29
         ]
     },
     {
@@ -484,6 +577,9 @@ const productos = [
         imagenes: [
             "https://http2.mlstatic.com/D_NQ_NP_2X_791576-MLA49020864900_022022-F.webp",
             "https://http2.mlstatic.com/D_NQ_NP_2X_737527-MLA49020949168_022022-F.webp"
+        ],
+        comments: [
+            40, 360, 310, 100, 200, 480, 90, 80, 220
         ]
     },
 ]
