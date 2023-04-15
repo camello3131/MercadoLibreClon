@@ -1,4 +1,363 @@
 
+.nav-header, .nav-header *, .nav-header *:before, .nav-header *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nav-header {
+    height: 100px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color: #fff159;
+    border: 0;
+    position: relative;
+}
+.nav-header {
+    background-color: #fff159;
+    border: 0;
+    position: relative;
+}
+.nav-header, [role=main], .nav-footer {
+    display: table-row;
+    width: 100%;
+}
+
+.nav-header-plus .nav-bounds {
+    display: grid;
+    grid-template-areas:
+        "nav-left-top nav-center-top nav-right-top"
+        "nav-left-bottom nav-center-bottom nav-right-bottom";
+    grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
+    grid-template-rows: 40px 28px;
+    -webkit-column-gap: 24px;
+    -moz-column-gap: 24px;
+    column-gap: 24px;
+    grid-column-gap: 24px;
+    row-gap: 12px;
+    grid-row-gap: 12px;
+    padding: 8px 10px 12px 10px;
+}
+
+.nav-header .nav-bounds {
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    padding: 8px 10px;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+}
+.nav-header, .nav-header *, .nav-header *:before, .nav-header *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nav-bounds {
+    max-width: 1220px;
+}
+.nav-bounds {
+    display: block;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.nav-header-plus .nav-left-area.nav-top-area {
+    grid-area: nav-left-top;
+}
+
+.nav-header-plus .nav-left-area {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.nav-header-plus .nav-top-area {
+    height: 40px;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.nav-header-plus .nav-center-area.nav-top-area {
+    grid-area: nav-center-top;
+}
+
+.nav-header-plus .nav-top-area {
+    height: 40px;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.nav-header-plus .nav-right-area.nav-top-area {
+    grid-area: nav-right-top;
+}
+.nav-header-plus .nav-right-area {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.nav-header-plus .nav-top-area {
+    height: 40px;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.nav-header-plus .nav-left-area.nav-bottom-area {
+    grid-area: nav-left-bottom;
+    font-weight: 400;
+}
+
+.nav-header-plus .nav-left-area {
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.nav-header-plus .nav-bottom-area {
+    height: 28px;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.nav-header-plus .nav-center-area.nav-bottom-area {
+    grid-area: nav-center-bottom;
+    padding: 4px;
+    margin: -4px;
+    height: 36px;
+}
+.nav-header-plus .nav-bottom-area {
+    height: 28px;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.nav-header, .nav-header *, .nav-header *:before, .nav-header *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.nav-header-plus .nav-right-area.nav-bottom-area {
+    grid-area: nav-right-bottom;
+}
+
+.nav-header-plus .nav-right-area {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+}
+.nav-header-plus .nav-bottom-area {
+    height: 28px;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+}
+.nav-header-plus .nav-area {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+#nav-skip-to-main-content {
+    color: #fff;
+}
+a.nav-skip-to-main-content {
+    border: 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    position: absolute;
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+    text-align: center;
+    background: #3484fa;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    cursor: pointer;
+    height: 0;
+    padding: 0;
+    line-height: normal;
+}
+.nav-logo {
+    background-repeat: no-repeat;
+    overflow: hidden;
+    text-indent: -999px;
+    background-image: url(https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.8/mercadolibre/logo__large_plus.png);
+    height: 34px;
+    width: 134px;
+    display: -webkit-flex;
+    display: flex;
+    position: static;
+    left: 0;
+    top: 0;
+}
+
+.nav-skip-to-main-content>.nav-skip-to-main-content__content {
+    display: none;
+}
+.nav-search {
+    z-index: 910;
+    will-change: left;
+    -webkit-transition: left .15s ease-out;
+    transition: left .15s ease-out;
+    top: 0;
+    right: 45px;
+    max-width: 720px;
+    left: -1px;
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0px;
+    position: relative;
+    overflow: visible;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.nav-header-visually-hidden {
+    position: absolute;
+    z-index: -1;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    margin: 0 -1px -1px 0;
+    overflow: hidden;
+    padding: 0;
+    display: block;
+}
+
+input[type=text].nav-search-input, input[type=search].nav-search-input {
+    position: relative;
+    z-index: 915;
+    color: #333;
+    font-size: 16px;
+    margin: 0;
+    font-family: inherit;
+    border-radius: 2px;
+    background-color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+    height: 40px;
+    width: 100%;
+    padding: 10px 60px 10px 15px;
+    border-style: solid;
+    border-color: rgba(0,0,0,0);
+    border-width: 1.5px;
+}
+button.nav-search-btn, button.nav-search-btn:focus {
+    left: auto;
+}
+
+button.nav-search-btn, button.nav-search-btn:focus {
+    position: absolute;
+    z-index: 920;
+    padding: 0;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: #666;
+    line-height: 1em;
+    border-radius: 0 2px 2px 0;
+    width: 46px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    background-image: none;
+    height: 40px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    box-shadow: none;
+}
+.nav-search-btn .nav-icon-search {
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.sb-suggestions {
+    text-align: left;
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    font-family: inherit;
+    position: absolute;
+    display: none;
+    z-index: 1005;
+    box-sizing: border-box;
+    min-width: 100%;
+}
+.sb-suggestions__list {
+    padding: 0;
+    margin: 12px 0;
+}
+.sb-suggestions__list--additional {
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px){
+    .sb-suggestions__list--additional {
+        margin: 0;
+        padding: 16.5px 0;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .sb-suggestions__list {
+        margin: 8px 0;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .sb-suggestions{
+        border-top: solid 1px #e6e6e6;
+        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+        padding: 0;
+        z-index: 1005;
+        margin-top: 0;
+        min-width: 0;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+}
+ 
+
+
+
 
 :root {
     --color-yellow: rgb(255, 241, 89);
@@ -159,6 +518,8 @@
         display: none;
     }
 }
+
+
 
 
 

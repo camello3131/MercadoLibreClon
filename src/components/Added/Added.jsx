@@ -1,53 +1,111 @@
 import React from 'react'
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom'
+import { getFetch } from '../helpers/getFetch';
+import { NavLink } from 'react-router-dom';
+import "./added.css"
 
 const Added = () => {
-    const location = useLocation();
-    console.log(location)
+
+    const [products, setProducts] = useState([])
+    const [product, setProduct] = useState ({})
+    const [loading, setLoading] = useState(true)
+    const params = useParams()
+
+    useEffect(() =>{
+        getFetch()
+        .then ((res) => {
+            setProducts(res)
+            setProduct(res.filter(product => product.id === params.Id))
+          })
+        .catch((err) => console.log(err))
+        .finally(() => {
+            setLoading(false)
+            console.log(product)
+        })
+    },[loading])
     
 
   return (
-    <div className='container'>
-        <div className='information-container'>
-            <div className='image-information'>
-                <div className='image-information__asset-wrapper'>
-                    <div className='image-information__asset'>
-                        <img src="" alt="" className='bf-ui-image--circle' />
-                        <div className='bf-ui-badge bf-ui-badge__icon'></div>
-                    </div> 
-                </div>
-                <div className='image-information__content'>
-                    <div className='image-information__text'>
-                        <h1 className='image-information__title'>
-                            <span className='bf-ui-rich-text bf-ui-rich-text--success'>Agregaste a tu carrito</span>
-                        </h1>
-                        <p className='image-information__description'>
-                            <span className='bf-ui-rich-text'>
-                                
-                            </span>
-                        </p>
+    loading? 
+        <div className='container spinner'>
+            <div className="spinner-border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    :
+    <main>
+        <div className='nav-main-content'>
+            <div className='main-container main-container__white'>
+                <div className='container'>
+                    <div className='information-container'>
+                        <div className='image-information'>
+                            <div className='image-information__asset-wrapper'>
+                                <div className='image-information__asset'>
+                                    <img src={product[0].img} alt="" className='bf-ui-image--circle'/>
+                                    <div className='bf-ui-badge bf-ui-badge__icon'>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="#00A650"></path>
+                                            <path d="M6.78786 9.39574L11.3645 4.81909L12.393 5.84761L6.78786 11.4528L3.60693 8.27185L4.63545 7.24333L6.78786 9.39574Z" fill="white"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className='image-information__content'>
+                                <div className='image-information__text'>
+                                    <h1 className='image-information__title'>
+                                        <span className='bf-ui-rich-text bf-ui-rich-text--success'>Agregaste a tu carrito</span>
+                                    </h1>
+                                    <p className='image-information__description'>
+                                        <span className='bf-ui-rich-text'>{product[0].nombre}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className='bf-ui-detail-row-with-images'>
+                            <div className='bf-ui-detail-row-with-images__text'>
+                                <h3 className='bf-ui-detail-row-with-images__title'>
+                                    <span className='bf-ui-rich-text'>productos en tu carrito</span>
+                                    <span className='bf-ui-rich-price bf-ui-rich-price--bold'>
+                                        <span>$</span>
+                                        <span className='bf-ui-price-small'>{product[0].precio}</span>
+                                        <span className='bf-ui-price-small-cents'>20</span>
+                                    </span>
+                                    <span className='bf-ui-rich-text bf-ui-rich-text--success'>¡Envío gratis!</span>
+                                </h3>
+                            </div>
+                            <ul className='bf-ui-detail-row-with-images__images'>
+                                <li className='bf-ui-detail-row-with-images__image bf-ui-detail-row-with-images__image-image'>
+                                    <img src={product[0].img} alt="" className='bf-ui-image--circle' />
+                                </li>
+                                <li className='bf-ui-detail-row-with-images__image bf-ui-detail-row-with-images__image-image'>
+                                    <img src={product[0].img} alt="" className='bf-ui-image--circle' />
+                                </li>
+                                <li className='bf-ui-detail-row-with-images__image bf-ui-detail-row-with-images__image-image'>
+                                    <img src={product[0].img} alt="" className='bf-ui-image--circle' />
+                                </li>
+                            </ul>
+                        </div>
+                        <div className='bf-ui-button-container bf-ui-button-container--horizontal bf-ui-button-container--transparent'>
+                            <NavLink to={"/cart"} >
+                                <button className='andes-button bf-ui-button andes-button--large andes-button--loud'>
+                                    <span className='andes-button__content'>
+                                        <span className='andes-button__text'>Ver carrito</span>
+                                    </span>
+                                </button>
+                            </NavLink>
+                            <button className='andes-button bf-ui-button andes-button--large andes-button--quiet'>
+                                <span className='andes-button__content'>
+                                    <span className='andes-button__text'>Comprar carrito</span>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
+                <div className='body-container'></div>
             </div>
         </div>
-        <div className='bf-ui-detail-row-with-images'>
-            <div className='bf-ui-detail-row-with-images__text'>
-                <h3 className='bf-ui-detail-row-with-images__title'>
-                    <span className='bf-ui-rich-text'>
-                    2 productos en tu carrito: 
-                    </span>
-                    <span className='bf-ui-rich-price bf-ui-rich-price--bold'>
-                        <span className='priceCurrency'>$</span>
-                        <span className='bf-ui-price-small'>74.276</span>
-                    </span>
-                    <span className='bf-ui-rich-text bf-ui-rich-text--success'>
-                    ¡Envío gratis!
-                    </span>
-                </h3>
-            </div>
-        </div>
-    </div>
+    </main>
   )
 }
 

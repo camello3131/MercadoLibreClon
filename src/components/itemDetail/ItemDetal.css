@@ -457,7 +457,12 @@ a, a:hover, a:link, a:visited {
     margin-left: 33px;
 }
 
-
+.ui-pdp-gallery__input{
+    display: none;
+}
+.ui-pdp-gallery__label{
+    cursor: pointer;
+}
 
 .ui-pdp-container--pdp {
     background-color: #fff;

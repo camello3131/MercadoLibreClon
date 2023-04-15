@@ -10,6 +10,11 @@ import Comments from "../Comments/Comments"
 
 const ItemDetail = ({product}) => {
 
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(product[0].img)
+
+
+  console.log(imagenSeleccionada)
+
     /////////////////////////////////////////////////
 
     const {addToCart, cart} = useCartContext()
@@ -85,18 +90,26 @@ const ItemDetail = ({product}) => {
                       <div className='ui-pdp-gallery__zoom-container'>
                         <div className='drift-zoom-pane ui-pdp-gallery__zoom-zoom-pane drift-opening ui-pdp-gallery__zoom-opening drift-closing ui-pdp-gallery__zoom-closing'>
                           <div className='drift-zoom-pane-loader ui-pdp-gallery__zoom-zoom-pane-loader'></div>
-                          <img src={product[0].img} alt="" style={{width: "850.5px", height: "1053px", transform: "translate(-155.417px, 0px)"}}/>
+                          <img src={imagenSeleccionada} alt="" style={{width: "850.5px", height: "1053px", transform: "translate(-155.417px, 0px)"}}/>
                         </div>
                         <div className='drift-zoom-pane ui-pdp-gallery__zoom-zoom-pane drift-opening ui-pdp-gallery__zoom-opening drift-closing ui-pdp-gallery__zoom-closing'>
                           <div className='drift-zoom-pane-loader ui-pdp-gallery__zoom-zoom-pane-loader'></div>
-                          <img src={product[0].imagenes} alt="" style={{width: "850.5px", height: "1053px", transform: "translate(-155.417px, 0px)"}}/>
+                          <img src={imagenSeleccionada} alt="" style={{width: "850.5px", height: "1053px", transform: "translate(-155.417px, 0px)"}}/>
                         </div>
                         <div className='drift-zoom-pane ui-pdp-gallery__zoom-zoom-pane drift-opening ui-pdp-gallery__zoom-opening drift-closing ui-pdp-gallery__zoom-closing'></div>
                         <div className='drift-zoom-pane ui-pdp-gallery__zoom-zoom-pane drift-opening ui-pdp-gallery__zoom-opening drift-closing ui-pdp-gallery__zoom-closing'></div>
                         <div className='drift-zoom-pane ui-pdp-gallery__zoom-zoom-pane drift-opening ui-pdp-gallery__zoom-opening drift-closing ui-pdp-gallery__zoom-closing'></div>
                       </div>
                       <div className='ui-pdp-gallery__column'>
-                        <input type="radio" className='ui-pdp-gallery__input' name="gallery-radio" id="gallery-thumbnail-890555-MLA50912449037_072022" value={0} checked readOnly/>
+                        <input
+                        type="radio" 
+                        className='ui-pdp-gallery__input' 
+                        name="gallery-radio" id="gallery-thumbnail-890555-MLA50912449037_072022" 
+                        value={0} 
+                        checked 
+                        readOnly
+                        onClick={() => setImagenSeleccionada(product[0].imagenes[0])}
+                        />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-890555-MLA50912449037_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
@@ -106,10 +119,19 @@ const ItemDetail = ({product}) => {
                             </div>
                           </label>
                           <figure className='ui-pdp-gallery__figure'>
-                            <img src={product[0].imagenes} alt="" className='ui-pdp-image ui-pdp-gallery__figure__image' style={{width: "410px", height: "500px"}}/>
+                            <img src={imagenSeleccionada} alt="" className='ui-pdp-image ui-pdp-gallery__figure__image' style={{width: "410px", height: "500px"}}/>
                           </figure>
                         </span>
-                        <input type="radio" className='ui-pdp-gallery__input' name="gallery-radio" id="gallery-thumbnail-920365-MLA50912414250_072022" value={0} checked readOnly/>
+                        <input 
+                        type="radio" 
+                        className='ui-pdp-gallery__input' 
+                        name="gallery-radio" 
+                        id="gallery-thumbnail-920365-MLA50912414250_072022" 
+                        value={0} 
+                        checked 
+                        readOnly
+                        onClick={() => setImagenSeleccionada(product[0].img)}
+                        />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-920365-MLA50912414250_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
@@ -118,9 +140,6 @@ const ItemDetail = ({product}) => {
                               </div>
                             </div>
                           </label>
-                          <figure className='ui-pdp-gallery__figure'>
-                            <img src={product[0].img} alt="" className='ui-pdp-image ui-pdp-gallery__figure__image' style={{width: "410px", height: "500px"}}/>
-                          </figure>
                         </span>
                       </div>
                     </div>
@@ -283,11 +302,6 @@ const ItemDetail = ({product}) => {
                         <p className='ui-pdp-color--GRAY ui-pdp-size--XXSMALL ui-pdp-family--REGULAR ui-pdp-seller__header__subtitle'>Hace Factura A</p>
                       </div>
                     </div>
-                  </div>
-                  <div className='ui-pdp-stock-information mt-24 mb-8'>
-                    <p className='ui-pdp-color--BLACK ui-pdp-size--SMALL ui-pdp-family--SEMIBOLD ui-pdp-stock-information__title'>
-                    Stock disponible
-                    </p>
                   </div>
                     <ItemCount stock={product[0].stock} initial={1} onAdd={onAdd} product={product[0]} />
                   <ul className='ui-pdp-benefits mt-24'>

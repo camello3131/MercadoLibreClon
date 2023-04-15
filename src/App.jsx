@@ -11,6 +11,7 @@ import PaysContainer from './components/paysContainer/PaysContainer.jsx'
 import CarouselOfertas from './components/carouselOfertas/CarouselOfertas'
 import Initial from './pages/Initial'
 import Added from './components/Added/Added'
+import Ingresar from './pages/Ingresar'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
           <Route path='/cart' element={<CartProducts/>} />
           <Route path='/addedproduct/:Id' element={<Added/>}/>
+          <Route path='/session' element= {<Ingresar/>} />
         </Routes>
       </BrowserRouter>
     </CartContextProvider>
