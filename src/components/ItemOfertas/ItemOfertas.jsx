@@ -1,6 +1,6 @@
 import "./itemofertas.css"
 import { Link } from "react-router-dom"
-const ItemOfertas = ({oferta}) => {
+const ItemOfertas = ({oferta, key}) => {
 
   return (
     <>

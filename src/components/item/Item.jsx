@@ -9,8 +9,9 @@ const Item = ({product}) => {
 
   function obtenerId() {
     setId(product.id)
-    getOneFetch(id)
   }
+
+  console.log(product)
 
   return(
           <div className="card col-3">
@@ -20,7 +21,7 @@ const Item = ({product}) => {
               <p className="card-text"> {product.descripcion} </p>
               <p className="card-text"><small className="text-muted"> Stock: {product.stock} </small></p>
               <Link to={`/detalle/${product.id}`}>
-              <button className='btn btn-primary' onClick={ obtenerId }>Ver detalles</button>
+              <button className='btn btn-primary'>Ver detalles</button>
               </Link>
           </div>
           </div>

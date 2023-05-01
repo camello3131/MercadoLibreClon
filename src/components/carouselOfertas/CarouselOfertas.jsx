@@ -16,24 +16,30 @@ import { Pagination, Navigation } from "swiper";
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
+import {getFirestore, doc, getDocs, collection } from "firebase/firestore"
+import { app } from '../../firebase/config'
 
 
 export default function CarouselOfertas() {
   const [loading, setLoading] = useState(true)
   const [products, setProduct] = useState([])
   const [ofertas, setOfertas] = useState([])
+  const [prodDb, setProdDb] = useState([])
 
   useEffect(() => {
-    getFetch()
-    .then ((res) => {
-        setProduct(res)
-        setOfertas(res.filter(product => product.descuento > 0))
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-    }, [])
+    const queryDB = getFirestore(app)
+    const queryCollection = collection(queryDB, "datos")
+    getDocs(queryCollection)
+    .then((res) => {
+      const data = res.docs.map(doc => doc.data());
+      setProdDb(data);
+      setOfertas(prodDb.filter(product => product.descuento > 0))
+      setLoading(false)
+    })
+  
+  }, [ofertas])
 
+  console.log(ofertas)
     const responsive = {
       superLargeDesktop: {
         // the naming can be any, depends on you.

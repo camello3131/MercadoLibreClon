@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import React from "react";
 import "./comments.css"
 
-const Comments = ({ product }) => {
+const Comments = ({ data }) => {
     const [comments, setComments] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showComments, setShowComments] = useState(false);
@@ -15,18 +15,18 @@ const Comments = ({ product }) => {
         const response = await fetch("https://jsonplaceholder.typicode.com/comments");
         const data = await response.json();
         const filteredComments = data.filter((comment, index) =>
-          product.comments.includes(index + 1)
+          data.comments.includes(index + 1)
         );
         setComments(filteredComments);
         setIsLoading(false);
       };
   
-      if (product) {
+      if (data) {
         fetchComments();
       }
-    }, [product]);
+    }, [data]);
   
-    if (!product) {
+    if (!data) {
       return null;
     }
   

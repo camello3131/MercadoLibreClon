@@ -8,9 +8,9 @@ import { Link } from "react-router-dom"
 import React, { useState, useEffect } from "react";
 import Comments from "../Comments/Comments"
 
-const ItemDetail = ({product}) => {
+const ItemDetail = ({data}) => {
 
-  const [imagenSeleccionada, setImagenSeleccionada] = useState(product[0].img)
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(data.img)
 
 
   console.log(imagenSeleccionada)
@@ -19,7 +19,7 @@ const ItemDetail = ({product}) => {
 
     const {addToCart, cart} = useCartContext()
     function onAdd(cantidad) {
-      addToCart({...product[0], cantidad: cantidad})
+      addToCart({...data, cantidad: cantidad})
     }
     
   return (
@@ -108,13 +108,13 @@ const ItemDetail = ({product}) => {
                         value={0} 
                         checked 
                         readOnly
-                        onClick={() => setImagenSeleccionada(product[0].imagenes[0])}
+                        onClick={() => setImagenSeleccionada(data.imagenes)}
                         />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-890555-MLA50912449037_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
                               <div className='ui-pdp-thumbnail__picture'>
-                                <img src={product[0].imagenes} alt="" style={{width:"44px", height: "44px"}}/>
+                                <img src={data.imagenes} alt="" style={{width:"44px", height: "44px"}}/>
                               </div>
                             </div>
                           </label>
@@ -130,13 +130,13 @@ const ItemDetail = ({product}) => {
                         value={0} 
                         checked 
                         readOnly
-                        onClick={() => setImagenSeleccionada(product[0].img)}
+                        onClick={() => setImagenSeleccionada(data.img)}
                         />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-920365-MLA50912414250_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
                               <div className='ui-pdp-thumbnail__picture'>
-                                <img src={product[0].img} alt="" style={{width:"44px", height: "44px"}}/>
+                                <img src={data.img} alt="" style={{width:"44px", height: "44px"}}/>
                               </div>
                             </div>
                           </label>
@@ -154,7 +154,7 @@ const ItemDetail = ({product}) => {
                         </span>
                       </div>
                       <div className='ui-pdp-header__title-container'>
-                        <h1 className='ui-pdp-title'> {product[0].nombre} </h1>
+                        <h1 className='ui-pdp-title'> {data.nombre} </h1>
                       </div>
                       <div className='ui-pdp-header__info'>
                         <a href="" className='ui-pdp-review__label ui-pdp-review__label--link'>
@@ -171,20 +171,20 @@ const ItemDetail = ({product}) => {
                     </div>
                     <div className='ui-pdp-promotions-pill-label best_seller_position ui-pdp-background-color--WHITE ui-pdp-color--BLUE ui-pdp-size--XXSMALL ui-pdp-family--SEMIBOLD'>
                       <a href="" className='ui-pdp-promotions-pill-label__target'>
-                      `14º en ${product[0].categoria}`
+                      `14º en ${data.categoria}`
                       </a>
                     </div>
                   </div>
                   <div className='ui-pdp-price mt-16 ui-pdp-price--size-large'>
                     <div className='ui-pdp-price__second-line'>
                       <span className='andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact' style={{fontSize:"36px"}}>
-                        <span className='andes-visually-hidden'>{product[0].precio} </span>
+                        <span className='andes-visually-hidden'>{data.precio} </span>
                         <span className='andes-money-amount__currency-symbol'>$</span>
-                        <span className='andes-money-amount__fraction'>{product[0].precio}</span>
+                        <span className='andes-money-amount__fraction'>{data.precio}</span>
                       </span>
                       <span className='ui-pdp-price__second-line__label ui-pdp-color--GREEN ui-pdp-size--MEDIUM'>
                         <span className='andes-money-amount__discount' style={{fontSize: "18px"}}>
-                            {product[0].descuento}% OFF
+                            {data.descuento}% OFF
                         </span>
                       </span>
                     </div>
@@ -194,7 +194,7 @@ const ItemDetail = ({product}) => {
                         6 cuotas de
                         <span className='andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact' style={{fontSize: "18px"}} >
                             <span className='andes-money-amount__currency-symbol'>$</span>
-                            <span className='andes-money-amount__fraction'> {product[0].precio / 6} </span>
+                            <span className='andes-money-amount__fraction'> {data.precio / 6} </span>
                         </span>
                       </p>
                       <p className='ui-pdp-color--SMALL ui-pdp-size--XSMALL ui-pdp-family--REGULAR mt-8'>
@@ -220,7 +220,7 @@ const ItemDetail = ({product}) => {
                     <section className='ui-vpp-highlighted-specs'>
                       <div className='ui-pdp-container__row ui-pdp-container__row--highlighted-features-title'>
                         <h2 className='ui-vpp-text-alignment--left ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--SEMIBOLD highlighted-features-title'>
-                        Lo que tenés que saber de este producto
+                        Lo que tenés que saber de este datao
                         </h2>
                       </div>
                       <div className='ui-pdp-container__row ui-pdp-container__row--highlighted-features'>
@@ -303,7 +303,11 @@ const ItemDetail = ({product}) => {
                       </div>
                     </div>
                   </div>
-                    <ItemCount stock={product[0].stock} initial={1} onAdd={onAdd} product={product[0]} />
+                  {/**
+                   * 
+                   * 
+                  */}
+                  <ItemCount stock={data.stock} initial={1} onAdd={onAdd} data={data} />
                   <ul className='ui-pdp-benefits mt-24'>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
@@ -334,7 +338,7 @@ const ItemDetail = ({product}) => {
                                 </a>
                               </div>
                             </div>
-                            , recibí el producto que esperabas o te devolvemos tu dinero.
+                            , recibí el datao que esperabas o te devolvemos tu dinero.
                           </p>
                         </div>
                       </div>
@@ -420,7 +424,7 @@ const ItemDetail = ({product}) => {
                               <img src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/time-positive.svg" alt="" />
                             </div>
                           </strong>
-                          <p className='ui-pdp-seller__text-description'>Despacha sus productos a tiempo</p>
+                          <p className='ui-pdp-seller__text-description'>Despacha sus dataos a tiempo</p>
                         </li>
                       </ul>
                     </div>
@@ -536,7 +540,7 @@ const ItemDetail = ({product}) => {
           <div className='ui-pdp-container__col col-3'></div>
           <div className='ui-pdp-container__col col-1 ui-pdp-container--column-right mt-40'></div>
         </div>
-        <Comments product= {product[0]} />
+        <Comments data= {data} />
       </div>
       <AdnArea/>
       <Footer/>

@@ -3,8 +3,8 @@ import "./itemCount.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const ItemCount = ( {stock, initial, onAdd, product} ) => {
-    console.log(product)
+export const ItemCount = ( {stock, initial, onAdd, data} ) => {
+    console.log(data)
     const [selectedQuantity, setSelectedQuantity] = useState('1');
 
   return (
@@ -89,8 +89,8 @@ export const ItemCount = ( {stock, initial, onAdd, product} ) => {
                         <span className='andes-button__content'>Comprar ahora</span>
                       </button>
                       <Link to={{
-                            pathname: `/addedproduct/${product.id}`,
-                            state: {...product} 
+                            pathname: `/addeddata/${data.id}`,
+                            state: {...data} 
                         }} >
                         <button className='andes-button andes-spinner__icon-base andes-button--quiet'
                             onClick={(e) => {

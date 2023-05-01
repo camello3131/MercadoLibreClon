@@ -1,3 +1,4 @@
+
 import './App.css'
 import ItemDetailContainer from './components/itemDetailContainer/ItemDetailContainer'
 import ItemListContainer from './components/itemListContainer/ItemListContainer'
@@ -12,6 +13,7 @@ import CarouselOfertas from './components/carouselOfertas/CarouselOfertas'
 import Initial from './pages/Initial'
 import Added from './components/Added/Added'
 import Ingresar from './pages/Ingresar'
+import SearchListContainer from './components/SearchListContainer/SearchListContainer'
 
 function App() {
 
@@ -26,8 +28,9 @@ function App() {
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
           <Route path='/cart' element={<CartProducts/>} />
-          <Route path='/addedproduct/:Id' element={<Added/>}/>
+          <Route path='/addeddata/:Id' element={<Added/>}/>
           <Route path='/session' element= {<Ingresar/>} />
+          <Route path='search/:busqueda' element={<SearchListContainer/>} />
         </Routes>
       </BrowserRouter>
     </CartContextProvider>
