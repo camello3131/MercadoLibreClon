@@ -1,5 +1,6 @@
 import { useCartContext } from "../../context/Context"
 import "./cartProducts.css"
+import { Link } from "react-router-dom"
 
 
 const CartProducts = () => {
@@ -151,11 +152,13 @@ const CartProducts = () => {
                 </div>
               </div>
               <div className="bf-ui-separator"></div>
-              <button className="andes-button bf-ui-button andes-button--large andes-button--loud">
-                <span className="andes-button__content">
-                  <span className="andes-button__text">Continuar compra</span>
-                </span>
-              </button>
+              <Link to={"/finalizar-compra"} >
+                <button className="andes-button bf-ui-button andes-button--large andes-button--loud">
+                  <span className="andes-button__content">
+                    <span className="andes-button__text">Continuar compra</span>
+                  </span>
+                </button>
+              </Link>
             </div>
           </div>
         </div>

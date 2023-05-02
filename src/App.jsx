@@ -14,6 +14,7 @@ import Initial from './pages/Initial'
 import Added from './components/Added/Added'
 import Ingresar from './pages/Ingresar'
 import SearchListContainer from './components/SearchListContainer/SearchListContainer'
+import FinalizarCompra from './components/FinalizarCompra/FinalizarCompra'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path='/addeddata/:Id' element={<Added/>}/>
           <Route path='/session' element= {<Ingresar/>} />
           <Route path='search/:busqueda' element={<SearchListContainer/>} />
+          <Route path='/finalizar-compra' element={<FinalizarCompra/>}  ></Route>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>
