@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import { getOneFetch } from '../helpers/getFetch'
 import { Link } from 'react-router-dom'
 import './item.css'
 
@@ -11,7 +10,6 @@ const Item = ({product}) => {
     setId(product.id)
   }
 
-  console.log(product)
 
   return(
           <div className="card col-3">

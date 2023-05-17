@@ -11,7 +11,6 @@ const CategoriesCarousel = () => {
   const rows = [];
   let items = [];
   
-  // Obtenemos el conjunto de categorías correspondiente a la vista actual
   const currentCategories = categorias.slice(startIndex + viewIndex * 14, startIndex + (viewIndex + 1) * 14);
 
   currentCategories.forEach((categoria, index) => {
@@ -37,28 +36,34 @@ const CategoriesCarousel = () => {
 
 
   return (
-    <div className="container-all-carousel">
-      <div className="section-header">
+    <div className="container-carousel-categorias">
+      <div className="section-header container-tittle">
         <h2>Categorías Populares</h2>
-        <div>
-  <svg class="nc-icon" aria-labelledby="MLA1743">
-    <use xlink:href="#nc-car-front"></use>
+        <div className='d-flex container-carousel-button'>
+  <svg className="nc-icon" aria-labelledby="MLA1743">
+    <use xlinkHhref="#nc-car-front"></use>
   </svg>
 </div>
 
       </div>
+      <div className="container-categories-buttons">
       {rows.slice(0, 2)}
-      {numViews > 1 && ( // Agregamos botones solo si hay más de una vista
-        <div>
+      {numViews > 1 && (
+        <div className='d-flex container-buttons'>
           {viewIndex > 0 && (
-            <button onClick={() => setViewIndex(viewIndex - 1)}>&lt;</button>
+            <button onClick={() => setViewIndex(viewIndex - 1)} className='andes-carousel-snapped__control andes-carousel-snapped__control--next andes-carousel-snapped__control--size-large'>
+              <span className='symbol-button'>&lt;</span>
+            </button>
           )}
           {viewIndex < numViews - 1 && (
-            <button onClick={handleNext}>&gt;</button>
+            <button onClick={handleNext} className='andes-carousel-snapped__control andes-carousel-snapped__control--next andes-carousel-snapped__control--size-large'>
+              <span className='symbol-button'>&gt;</span>
+            </button>
           )}
         </div>
       )}
       {rows.slice(2)}
+      </div>
     </div>
   );
 }

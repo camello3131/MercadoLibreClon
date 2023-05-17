@@ -3,14 +3,14 @@ import "./suscriptions.css"
 
 const Subscriptions = () => {
   return (
-    <div>
-        <div className='row container'>
+    <div className='container-subs'>
+        <div className='row container container-subscriptions'>
             <div className='section-header'>
                 <h2>Beneficios de Mercado Puntos</h2>
                 <a href="#">Ver todos los beneficios</a>
             </div>
             <div className='partners-subscriptions__body'>
-                <div className='carousel-container'>
+                <div className='carousel-container-subscriptions'>
                     <div className='slick-initialized slick-slider'>
                         <div className='slick-list'>
                             <div className='slick-track'>
@@ -37,7 +37,7 @@ const Subscriptions = () => {
                                             <div className='partners-subscriptions__slide-logo-text'>
                                                 <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/hbomax/logo/logoSquare@2x.png?v=1" alt="" className='partners-subscriptions__slide-logo'/>
                                                 <div className='partners-subscriptions__slide-texts'>
-                                                    <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--benefit'>7 DÍAS GRATIS</span>
+                                                    <span className='partners-subscriptions__slide-texts-line-span partners-subscriptions__slide-texts-line--benefit'>7 DÍAS GRATIS</span>
                                                     <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--partner-name'>Hasta 50% OFF</span>
                                                     <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--partner-name'>HBO Max</span>
                                                 </div>
@@ -53,7 +53,7 @@ const Subscriptions = () => {
                                                 <div className='partners-subscriptions__slide-logo-text'>
                                                     <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/paramount/logos/paramount-logo-vdp-56-x-56-filled@2x.png" alt="" className='partners-subscriptions__slide-logo'/>
                                                     <div className='partners-subscriptions__slide-texts'>
-                                                        <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--benefit'>7 DÍAS GRATIS</span>
+                                                        <span className='partners-subscriptions__slide-texts-line-span partners-subscriptions__slide-texts-line--benefit'>7 DÍAS GRATIS</span>
                                                         <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--partner-name'>Hasta 50% OFF</span>
                                                         <span className='partners-subscriptions__slide-texts-line partners-subscriptions__slide-texts-line--partner-name'>Paramount+</span>
                                                     </div>

@@ -1,10 +1,13 @@
 import React from 'react'
+import "./foo.css"
+
 
 const FooterHead = () => {
   return (
     <>
         <section className='site-shopping-info'>
             <div className="container">
+                <div className="top-container-footer">
                 <div className='info-slide'>
                     <div className='img-container'>
                         <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg" className='img-container' alt="" />
@@ -34,6 +37,8 @@ const FooterHead = () => {
                         <span>¿No te gusta? ¡Devolvelo! En Mercado Libre, no hay nada que no puedas hacer, porque estás siempre protegido.</span>
                     </p>
                     <a href="">Cómo te protegemos</a>
+                </div>
+
                 </div>
             </div>
         </section>

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import React from "react";
 import "./comments.css"
 
-const Comments = ({ data }) => {
+const Comments = ({ item }) => {
     const [comments, setComments] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
     const [showComments, setShowComments] = useState(false);
@@ -15,18 +15,18 @@ const Comments = ({ data }) => {
         const response = await fetch("https://jsonplaceholder.typicode.com/comments");
         const data = await response.json();
         const filteredComments = data.filter((comment, index) =>
-          data.comments.includes(index + 1)
+          item.comments.includes(index + 1)
         );
         setComments(filteredComments);
         setIsLoading(false);
       };
   
-      if (data) {
+      if (item) {
         fetchComments();
       }
-    }, [data]);
+    }, [item]);
   
-    if (!data) {
+    if (!item) {
       return null;
     }
   
@@ -72,12 +72,6 @@ const Comments = ({ data }) => {
                         </div>
                       </li>
                     </ul>
-                    <div className="questionTooltip">
-                      <div>
-                        <p className="ui-pdp-questions__tooltip__primary">¿Tenés dudas?</p>
-                      </div>
-                      <span className="ui-pdp-questions__tooltip__close"></span>
-                    </div>
                   </div>
                 </div>
                 <div className="ui-pdp-qadb__search-bar">
@@ -95,6 +89,9 @@ const Comments = ({ data }) => {
                         </div>
                       </div>
                       <button className="ui-pdp-qadb__search-bar__search">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#eee" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                      </svg>
                       </button>
                     </div>
                   </form>

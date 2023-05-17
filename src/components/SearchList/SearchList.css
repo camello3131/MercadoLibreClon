@@ -386,3 +386,9 @@
 .ui-search-item__promise .ui-search-item__promise__text {
     margin-right: 8px;
 }
+.shops__image-element{
+    object-fit: cover;
+}
+.shops__sidebar{
+    color: #333;
+}

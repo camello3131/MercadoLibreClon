@@ -9,7 +9,9 @@ const Beneficios = () => {
                 <div className='loyalty-buylevel6__header'>
                     <div className="loyalty-buylevel6__header__title">Suscribite al nivel 6</div>
                     <div className='loyalty-buylevel6__header-pricing-with-serapator loyalty-buylevel6__header-pricing--left'>
-                        <span className='loyalty-buylevel6__header-preprice loyalty-buylevel6__header-preprice--strike'>$ 1.439</span>
+                        <span className='loyalty-buylevel6__header-preprice loyalty-buylevel6__header-preprice--strike'>
+                            <strike>$ 1439</strike>
+                        </span>
                         <span>
                             <span className='loyalty-buylevel6__header-price loyalty-buylevel6__header-price--bold'>$499</span>
                             <span className='loyalty-buylevel6__header-period'>/ mes</span>
@@ -28,7 +30,7 @@ const Beneficios = () => {
                             </div>
                             <span className='loyalty-buylevel6__body-benefit-text'>Disney+ sin cargo</span>
                         </div>
-                        <div className='loyalty-buylevel6__body-benefit'>
+                        <div className='loyalty-buylevel6__body-benefÑit'>
                             <div className='loyalty-buylevel6__body-benefit-logo'>
                                 <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/widget-l6/starplus.svg" alt="" className='loyalty-buylevel6__body-benefit-logo-img'/>
                             </div>

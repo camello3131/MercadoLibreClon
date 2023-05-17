@@ -3,9 +3,11 @@ import "./itemCount.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const ItemCount = ( {stock, initial, onAdd, data} ) => {
-    console.log(data)
-    const [selectedQuantity, setSelectedQuantity] = useState('1');
+export const ItemCount = ( {stock, initial, onAdd, item} ) => {
+
+
+    const [selectedQuantity, setSelectedQuantity] = useState(1);
+
 
   return (
     <>
@@ -77,7 +79,7 @@ export const ItemCount = ( {stock, initial, onAdd, data} ) => {
                             </div>
                           <span className='ui-pdp-buybox__quantity__chevron'></span>
                           <span className='ui-pdp-buybox__quantity__available'>
-                            {stock} disponibles
+                            ({stock} disponibles)
                           </span>
                         </span>
                       </button>
@@ -85,16 +87,25 @@ export const ItemCount = ( {stock, initial, onAdd, data} ) => {
                   </div>
                   <div className='ui-pdp-actions'>
                     <div className='ui-pdp-actions__container'>
-                      <button className='andes-button andes-spinner__icon-base andes-button--loud'>
+                    <Link to={{
+                            pathname: `/addeditem/${item.id}`,
+                            state: {...item} 
+                        }} >
+                      <button className='andes-button andes-spinner__icon-base andes-button--loud'
+                        onClick={(e) => {
+                        onAdd(selectedQuantity)}} 
+                      >
                         <span className='andes-button__content'>Comprar ahora</span>
                       </button>
+                      </Link>
+
                       <Link to={{
-                            pathname: `/addeddata/${data.id}`,
-                            state: {...data} 
+                            pathname: `/addeditem/${item.id}`,
+                            state: {...item} 
                         }} >
                         <button className='andes-button andes-spinner__icon-base andes-button--quiet'
                             onClick={(e) => {
-                                onAdd(selectedQuantity)}} 
+                            onAdd(selectedQuantity)}} 
                         >
                             <span className='andes-button__content'>Agregar al carrito</span>
                         </button>

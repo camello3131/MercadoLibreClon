@@ -1,85 +1,56 @@
 import "./ItemDetal.css"
 import { useCartContext } from '../../context/Context'
-import { categorias } from '../helpers/getFetch'
 import { ItemCount } from '../ItemCount/ItemCount'
 import AdnArea from '../adn-Area/AdnArea.jsx'
 import Footer from '../Footer/Footer.jsx'
-import { Link } from "react-router-dom"
 import React, { useState, useEffect } from "react";
 import Comments from "../Comments/Comments"
 
-const ItemDetail = ({data}) => {
+const ItemDetail = ({item}) => {
 
-  const [imagenSeleccionada, setImagenSeleccionada] = useState(data.img)
-
-
-  console.log(imagenSeleccionada)
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(item.img)
 
     /////////////////////////////////////////////////
 
     const {addToCart, cart} = useCartContext()
     function onAdd(cantidad) {
-      addToCart({...data, cantidad: cantidad})
+      addToCart({...item, cantidad: cantidad})
     }
     
   return (
     <>
-    <div className="ui-pdp-container ui-pdp-container--top">
-      <div className="ui-pdp-container__row">
-        <div className="ui-pdp-container__col col-5 ui-pdp-container--breadcrumb-related">
-          <div className="ui-pdp-related-search">
-            <ul className="ui-pdp-related-search__list">
-              <li className="ui-pdp-related-search__item ui-pdp-related-search__item-title"> También puede interesarte: </li>
-              <li className="ui-pdp-related-search__item">
-                <a href="">tcl tab 10s</a>
-              </li>
-              <li className="ui-pdp-related-search__item">
-                <a href="">tablet samsung s8</a>
-              </li>
-              <li className="ui-pdp-related-search__item">
-                <a href="">tablet telefono</a>
-              </li>
-            </ul>
-          </div>
-          <div className="ui-pdp-container__row ui-pdp-container__row--breadcrumb">
-            <div className="ui-pdp-breadcrumb">
-              <a href="" className="ui-pdp-breadcrumb__link">Volver</a>
-              <nav>
-                <ol className="andes-breadcrumb">
-                  <li className="andes-breadcrumb__item">
-                    <a href="" className="andes-breadcrumb__link">Tablets</a>
-                    <div className="andes-breadcrumb__chevron"></div>
-                  </li>
-                  <li className="andes-breadcrumb__item">
-                    <a href="" className="andes-breadcrumb__link">Computación</a>
-                    <div className="andes-breadcrumb__chevron"></div>
-                  </li>
-                  <li className="andes-breadcrumb__item">
-                    <a href="" className="andes-breadcrumb__link">Tablets y Accesorios</a>
-                    <div className="andes-breadcrumb__chevron"></div>
-                  </li>
-                </ol>
-              </nav>
-            </div>
-          </div>
+    <div className="container-top-detail">
+      <div className="top-and-bottom">
+        <div className="top-menu">
+          <span className="span-detail">Tambien puede interesarte: </span>
+          <a href="">
+            <span className="span-detail">tcl tab 10stablet samsung s8tablet telefono</span>
+          </a>
         </div>
-        <div className="ui-pdp-container__col col-2 ui-pdp-container--share">
-          <div className="ui-pdp-share">
-            <div className="andes-tooltip__trigger">
-              <button className="andes-button ui-pdp-share__link__label andes-button--small andes-button--transparent">
-                <span className="andes-button__content">Compartir</span>
-              </button>
-            </div>
+        <div className="bottom-menu">
+          <div className="left-bottom-menu-detail">
+            <a href="">
+              <span className="no-color-blue span-detail">Volver </span>
+            </a>
+            <span className="barra-separadora span-detail">|</span>
+            <a href="">
+              <span className="span-detail"> {item.categoria}</span>
+            </a>
           </div>
-          <div className="ui-pdp-syi">
-            <a href="" className="ui-pdp-syi__link">Vender uno igual</a>
+          <div className="right-bottom-menu-detail">
+          <a href="">
+            <span className="span-detail">Compartir </span>
+          </a>
+          <span className="barra-separadora span-detail">|</span>
+          <a href="">
+            <span className="span-detail"> Vender uno igual</span>
+          </a>
           </div>
         </div>
       </div>
     </div>
 
-
-      <div className='ui-pdp-container ui-pdp-container--pdp container'>
+      <div className='ui-pdp-container ui-pdp-container--pdp'>
         <div className='ui-pdp-container__row ui-pdp--relative ui-pdp-with--separator--fluid pb-40'>
           <div className='ui-pdp-container__col col-3 ui-pdp-container--column-center pb-40'>
             <div className='ui-pdp--sticky-wrapper ui-pdp--sticky-wrapper-center' style={{top: "-2015px"}}>
@@ -108,18 +79,18 @@ const ItemDetail = ({data}) => {
                         value={0} 
                         checked 
                         readOnly
-                        onClick={() => setImagenSeleccionada(data.imagenes)}
+                        onClick={() => setImagenSeleccionada(item.imagenes)}
                         />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-890555-MLA50912449037_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
                               <div className='ui-pdp-thumbnail__picture'>
-                                <img src={data.imagenes} alt="" style={{width:"44px", height: "44px"}}/>
+                                <img src={item.imagenes} alt="" style={{width:"44px", height: "44px"}} className="img-item"/>
                               </div>
                             </div>
                           </label>
                           <figure className='ui-pdp-gallery__figure'>
-                            <img src={imagenSeleccionada} alt="" className='ui-pdp-image ui-pdp-gallery__figure__image' style={{width: "410px", height: "500px"}}/>
+                            <img src={imagenSeleccionada} alt="" className='ui-pdp-image ui-pdp-gallery__figure__image'/>
                           </figure>
                         </span>
                         <input 
@@ -130,13 +101,13 @@ const ItemDetail = ({data}) => {
                         value={0} 
                         checked 
                         readOnly
-                        onClick={() => setImagenSeleccionada(data.img)}
+                        onClick={() => setImagenSeleccionada(item.img)}
                         />
                         <span className='ui-pdp-gallery__wrapper'>
                           <label htmlFor="gallery-thumbnail-920365-MLA50912414250_072022" className='ui-pdp-gallery__label'>
                             <div className='ui-pdp-thumbnail ui-pdp-gallery__thumbnail'>
                               <div className='ui-pdp-thumbnail__picture'>
-                                <img src={data.img} alt="" style={{width:"44px", height: "44px"}}/>
+                                <img src={item.img} alt="" className="img-item"/>
                               </div>
                             </div>
                           </label>
@@ -145,7 +116,7 @@ const ItemDetail = ({data}) => {
                     </div>
                   </div>
                 </div>
-                <div className='ui-pdp-container__col col-2 mr-32' style={{maxWidth:"352px"}}>
+                <div className='ui-pdp-container__col col-2' style={{maxWidth:"352px"}}>
                   <div className='ui-pdp-container__top-wrapper mt-40'>
                     <div className='ui-pdp-header'>
                       <div className='ui-pdp-header__subtitle'>
@@ -154,11 +125,27 @@ const ItemDetail = ({data}) => {
                         </span>
                       </div>
                       <div className='ui-pdp-header__title-container'>
-                        <h1 className='ui-pdp-title'> {data.nombre} </h1>
+                        <h1 className='ui-pdp-title'> {item.nombre} </h1>
                       </div>
                       <div className='ui-pdp-header__info'>
-                        <a href="" className='ui-pdp-review__label ui-pdp-review__label--link'>
-                          <span className="ui-pdp-review__ratings"></span>
+                        <a href="" className='ui-pdp-review__label ui-pdp-review__label--link stars-tienda'>
+                          <span className="ui-pdp-review__ratings">
+                            <svg className="ui-pdp-icon ui-pdp-icon--star-full" width={10} height={10} viewBox="0 0 10 10">
+                              <path fill="#3483FA" fill-rule="evenodd" d="M5.056 8L1.931 9.648l.597-3.49L0 3.684l3.494-.509L5.056 0l1.562 3.176 3.494.51-2.528 2.471.597 3.491z"></path>
+                            </svg>
+                            <svg className="ui-pdp-icon ui-pdp-icon--star-full" width={10} height={10} viewBox="0 0 10 10">
+                            <path fill="#3483FA" fill-rule="evenodd" d="M5.056 8L1.931 9.648l.597-3.49L0 3.684l3.494-.509L5.056 0l1.562 3.176 3.494.51-2.528 2.471.597 3.491z"></path>
+                            </svg>
+                            <svg className="ui-pdp-icon ui-pdp-icon--star-full" width={10} height={10} viewBox="0 0 10 10">
+                            <path fill="#3483FA" fill-rule="evenodd" d="M5.056 8L1.931 9.648l.597-3.49L0 3.684l3.494-.509L5.056 0l1.562 3.176 3.494.51-2.528 2.471.597 3.491z"></path>
+                            </svg>
+                            <svg className="ui-pdp-icon ui-pdp-icon--star-full" width={10} height={10} viewBox="0 0 10 10">
+                            <path fill="#3483FA" fill-rule="evenodd" d="M5.056 8L1.931 9.648l.597-3.49L0 3.684l3.494-.509L5.056 0l1.562 3.176 3.494.51-2.528 2.471.597 3.491z"></path>
+                            </svg>
+                            <svg className="ui-pdp-icon ui-pdp-icon--star-full" width={10} height={10} viewBox="0 0 10 10">
+                            <path fill="#3483FA" fill-rule="evenodd" d="M5.056 8L1.931 9.648l.597-3.49L0 3.684l3.494-.509L5.056 0l1.562 3.176 3.494.51-2.528 2.471.597 3.491z"></path>
+                            </svg>
+                          </span>
                           <span className='ui-pdp-review__amount'>(1467)</span>
                         </a>
                       </div>
@@ -171,20 +158,38 @@ const ItemDetail = ({data}) => {
                     </div>
                     <div className='ui-pdp-promotions-pill-label best_seller_position ui-pdp-background-color--WHITE ui-pdp-color--BLUE ui-pdp-size--XXSMALL ui-pdp-family--SEMIBOLD'>
                       <a href="" className='ui-pdp-promotions-pill-label__target'>
-                      `14º en ${data.categoria}`
+                      14º en {item.categoria}
                       </a>
                     </div>
                   </div>
                   <div className='ui-pdp-price mt-16 ui-pdp-price--size-large'>
                     <div className='ui-pdp-price__second-line'>
                       <span className='andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact' style={{fontSize:"36px"}}>
-                        <span className='andes-visually-hidden'>{data.precio} </span>
-                        <span className='andes-money-amount__currency-symbol'>$</span>
-                        <span className='andes-money-amount__fraction'>{data.precio}</span>
-                      </span>
-                      <span className='ui-pdp-price__second-line__label ui-pdp-color--GREEN ui-pdp-size--MEDIUM'>
+                        {
+                          item.descuento > 0 ?
+                          <div>
+                            <span>
+                             <strike className="price-before">${item.precio}</strike>
+                            </span>
+                            <div className="container-descuento">
+                            <span className='andes-money-amount__currency-symbol'>$</span>
+                            <span className='andes-money-amount__fraction'>{item.precio-(item.precio / 100 * item.descuento)}</span>
+                            <span className='ui-pdp-price__second-line__label ui-pdp-color--GREEN ui-pdp-size--MEDIUM'>
                         <span className='andes-money-amount__discount' style={{fontSize: "18px"}}>
-                            {data.descuento}% OFF
+                            {item.descuento}% OFF
+                        </span>
+                      </span>
+
+                            </div>
+                          </div>
+                          :
+                          <div>
+                            <span className='andes-money-amount__currency-symbol'>$</span>
+                            <span className='andes-money-amount__fraction'>{item.precio}</span>
+                          </div>
+                        }
+                        <span className='andes-visually-hidden'>
+                          <strike>{item.precio}</strike>
                         </span>
                       </span>
                     </div>
@@ -194,11 +199,11 @@ const ItemDetail = ({data}) => {
                         6 cuotas de
                         <span className='andes-money-amount ui-pdp-price__part andes-money-amount--cents-superscript andes-money-amount--compact' style={{fontSize: "18px"}} >
                             <span className='andes-money-amount__currency-symbol'>$</span>
-                            <span className='andes-money-amount__fraction'> {data.precio / 6} </span>
+                            <span className='andes-money-amount__fraction'> {(item.precio / 6).toFixed(0)} </span>
                         </span>
                       </p>
                       <p className='ui-pdp-color--SMALL ui-pdp-size--XSMALL ui-pdp-family--REGULAR mt-8'>
-                        <span className='ui-pdp-color--GREEN ui-pdp-family--SEMIBOLD'>Duplica puntos:</span>
+                        <span className='ui-pdp-color--GREEN ui-pdp-family--SEMIBOLD'>Duplica puntos: </span>
                         <span className='ui-pdp-color--GRAY ui-pdp-family--REGULAR'>sumás 284 Mercado Puntos</span>
                       </p>
                     </div>
@@ -220,13 +225,13 @@ const ItemDetail = ({data}) => {
                     <section className='ui-vpp-highlighted-specs'>
                       <div className='ui-pdp-container__row ui-pdp-container__row--highlighted-features-title'>
                         <h2 className='ui-vpp-text-alignment--left ui-pdp-color--BLACK ui-pdp-size--XSMALL ui-pdp-family--SEMIBOLD highlighted-features-title'>
-                        Lo que tenés que saber de este datao
+                        Lo que tenés que saber de este producto
                         </h2>
                       </div>
                       <div className='ui-pdp-container__row ui-pdp-container__row--highlighted-features'>
                         <div className='ui-vpp-highlighted-specs__features'>
                           <ul className='ui-vpp-highlighted-specs__features-list'>
-
+                            {item.descripcion}
                           </ul>
                           <a href="" className='ui-pdp-media__action ui-vpp-highlighted-specs__features-action'>
                           Ver características
@@ -241,6 +246,7 @@ const ItemDetail = ({data}) => {
               <div className='ui-pdp-container__row'></div>
               <div className='ui-pdp-container__row'></div>
               <div className='ui-pdp-container__row'></div>
+              <hr  className="separator"/>
               <div className='ui-pdp-container__row'>
                 <div className='ui-pdp-container__col col-1'>
                   <div className='ui-pdp-description pl-45 pr-45 ui-pdp-collapsable--is-collapsed'>
@@ -265,6 +271,7 @@ const ItemDetail = ({data}) => {
                   <input type="hidden" value={"GwONo6h2-_3Z5mZZYehwOEWdOGuBuBDq2Vpw"} name="_csrf" />
                   <div className='ui-pdp-media ui-pdp-shipping ui-pdp-shipping--md mb-20 ui-pdp-color--GREEN'>
                     <figure className='ui-pdp-media__figure'>
+                      <svg xmlns="http://www.w3.org/2000/svg" className="ui-pdp-icon ui-pdp-icon--shipping ui-pdp-icon--truck ui-pdp-color--GREEN" width={18} height={15} viewBox="0 0 18 15" ></svg>
                     </figure>
                     <div className='ui-pdp-media__body'>
                       <div className='andes-tooltip__trigger'>
@@ -307,11 +314,15 @@ const ItemDetail = ({data}) => {
                    * 
                    * 
                   */}
-                  <ItemCount stock={data.stock} initial={1} onAdd={onAdd} data={data} />
+                  <ItemCount stock={item.stock} initial={1} onAdd={onAdd} item={item} />
                   <ul className='ui-pdp-benefits mt-24'>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
-                        <figure className='ui-pdp-media__figure'></figure>
+                        <figure className='ui-pdp-media__figure'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-90deg-left" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M1.146 4.854a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H12.5A2.5 2.5 0 0 1 15 6.5v8a.5.5 0 0 1-1 0v-8A1.5 1.5 0 0 0 12.5 5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4z"/>
+                        </svg>
+                        </figure>
                         <div className='ui-pdp-media__body'>
                           <p className='ui-pdp-family--REGULAR ui-pdp-media__title'>
                             <div className='ui-pdp-action-modal'>
@@ -328,7 +339,12 @@ const ItemDetail = ({data}) => {
                     </li>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
-                        <figure className='ui-pdp-media__figure'></figure>
+                        <figure className='ui-pdp-media__figure'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                        </figure>
                         <div className='ui-pdp-media__body'>
                           <p className='ui-pdp-family--REGULAR ui-pdp-media__title'>
                             <div className='ui-pdp-action-modal'>
@@ -338,14 +354,18 @@ const ItemDetail = ({data}) => {
                                 </a>
                               </div>
                             </div>
-                            , recibí el datao que esperabas o te devolvemos tu dinero.
+                            , recibí el itemo que esperabas o te devolvemos tu dinero.
                           </p>
                         </div>
                       </div>
                     </li>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
-                        <figure className='ui-pdp-media__figure'></figure>
+                        <figure className='ui-pdp-media__figure'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trophy" viewBox="0 0 16 16">
+                          <path d="M2.5.5A.5.5 0 0 1 3 0h10a.5.5 0 0 1 .5.5c0 .538-.012 1.05-.034 1.536a3 3 0 1 1-1.133 5.89c-.79 1.865-1.878 2.777-2.833 3.011v2.173l1.425.356c.194.048.377.135.537.255L13.3 15.1a.5.5 0 0 1-.3.9H3a.5.5 0 0 1-.3-.9l1.838-1.379c.16-.12.343-.207.537-.255L6.5 13.11v-2.173c-.955-.234-2.043-1.146-2.833-3.012a3 3 0 1 1-1.132-5.89A33.076 33.076 0 0 1 2.5.5zm.099 2.54a2 2 0 0 0 .72 3.935c-.333-1.05-.588-2.346-.72-3.935zm10.083 3.935a2 2 0 0 0 .72-3.935c-.133 1.59-.388 2.885-.72 3.935zM3.504 1c.007.517.026 1.006.056 1.469.13 2.028.457 3.546.87 4.667C5.294 9.48 6.484 10 7 10a.5.5 0 0 1 .5.5v2.61a1 1 0 0 1-.757.97l-1.426.356a.5.5 0 0 0-.179.085L4.5 15h7l-.638-.479a.501.501 0 0 0-.18-.085l-1.425-.356a1 1 0 0 1-.757-.97V10.5A.5.5 0 0 1 9 10c.516 0 1.706-.52 2.57-2.864.413-1.12.74-2.64.87-4.667.03-.463.049-.952.056-1.469H3.504z"/>
+                        </svg>
+                        </figure>
                         <div className='ui-pdp-media__body'>
                           <p className='ui-pdp-family--REGULAR ui-pdp-media__title'>
                             <div className='ui-pdp-action-modal'>
@@ -362,7 +382,12 @@ const ItemDetail = ({data}) => {
                     </li>
                     <li className='ui-pdp-benefits__item'>
                       <div className='ui-pdp-media ui-pdp-color--GRAY'>
-                        <figure className='ui-pdp-media__figure'></figure>
+                        <figure className='ui-pdp-media__figure'>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-award" viewBox="0 0 16 16">
+                          <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68L9.669.864zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702 1.509.229z"/>
+                          <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                        </svg>
+                        </figure>
                         <div className='ui-pdp-media__body'>
                           <p className='ui-pdp-family--REGULAR ui-pdp-media__title'>
                             <div className='ui-pdp-action-modal'>
@@ -424,7 +449,7 @@ const ItemDetail = ({data}) => {
                               <img src="https://http2.mlstatic.com/frontend-assets/vpp-frontend/time-positive.svg" alt="" />
                             </div>
                           </strong>
-                          <p className='ui-pdp-seller__text-description'>Despacha sus dataos a tiempo</p>
+                          <p className='ui-pdp-seller__text-description'>Despacha sus itemos a tiempo</p>
                         </li>
                       </ul>
                     </div>
@@ -540,7 +565,7 @@ const ItemDetail = ({data}) => {
           <div className='ui-pdp-container__col col-3'></div>
           <div className='ui-pdp-container__col col-1 ui-pdp-container--column-right mt-40'></div>
         </div>
-        <Comments data= {data} />
+        <Comments item= {item} />
       </div>
       <AdnArea/>
       <Footer/>

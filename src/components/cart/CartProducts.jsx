@@ -4,8 +4,12 @@ import { Link } from "react-router-dom"
 
 
 const CartProducts = () => {
-    const { cart, removeCart } = useCartContext()
-    console.log(cart)
+  
+  
+  const { cart, removeProduct,totalPrice } = useCartContext()
+  const total = ()=> totalPrice()
+
+
   return (
     cart.length > 0 ?
     <div className="nav-main-content">
@@ -33,49 +37,24 @@ const CartProducts = () => {
                     </p>
                     <div className="item-cart__actions">
                       <div className="bf-ui-link-container bf-ui-link-container--horizontal">
+                        <span onClick={() => removeProduct(item.id)} className="btn-eliminar">
                         <span>
-                          <span className="bf-ui-rich-text">Eliminar</span>
+                          <span className="bf-ui-rich-text actions-item">Eliminar</span>
+                        </span>
                         </span>
                         <span>
-                          <span className="bf-ui-rich-text">Más productos del vendedor</span>
+                          <span className="bf-ui-rich-text actions-item">Más productos del vendedor</span>
                         </span>
                         <span>
-                          <span className="bf-ui-rich-text">Comprar ahora</span>
+                          <span className="bf-ui-rich-text actions-item">Comprar ahora</span>
                         </span>
                         <span>
-                          <span className="bf-ui-rich-text">Guardar para después</span>
+                          <span className="bf-ui-rich-text actions-item">Guardar para después</span>
                         </span>
                       </div>
                     </div>
                   </div>
                 </article>
-                <div className="bf-ui-quantity-selector">
-                  <div className="bf-ui-quantity-selector">
-                    <form action="" className="bf-ui-quantity-selector__form">
-                      <input type="text" />
-                      <button className="andes-button bf-ui-quantity-selector__button bf-ui-quantity-selector__button--disabled andes-button--large andes-button--transparent andes-button--disabled">
-                        <span className="andes-button__content">-</span>
-                      </button>
-                      <div className="andes-form-control andes-form-control--textfield andes-form-control--default bf-ui-quantity-selector__input">
-                        <label htmlFor="">
-                          <div className="andes-form-control__control">
-                            <input type="text" className="andes-form-control__field" />
-                          </div>
-                        </label>
-                        <div className="andes-form-control__bottom">
-                          <span className="andes-form-control__message"></span>
-                        </div>
-                      </div>
-                      <button>
-                        <span className="andes-button__content">+</span>
-                      </button>
-                    </form>
-                    <div className="bf-ui-quantity-selector__spinner-container"></div>
-                  </div>
-                  <p className="bf-ui-quantity-selector__message">
-                    <span className="bf-ui-rich-text bf-ui-rich-text--false">{item.stock} disponibles</span>
-                  </p>
-                </div>
                 <div className="item-price-container">
                   <div className="item-price-discount">
                     <span className="bf-ui-rich-text bf-ui-rich-text--success bf-ui-rich-text--xxsmall">-{item.descuento}%</span>
@@ -90,7 +69,11 @@ const CartProducts = () => {
                     <div className="item-price-current">
                       <span className="bf-ui-rich-price bf-ui-rich-price--large">
                         <span>$</span>
-                        <span className="bf-ui-rich-price bf-ui-rich-price--large">{item.precio}</span>
+                        <span className="bf-ui-rich-price bf-ui-rich-price--large">
+                          {item.cantidad * (item.descuento 
+                            ? item.precio * (1 - item.descuento / 100) 
+                            : item.precio)}
+                        </span>
                       </span>
                     </div>
                   </div>
@@ -145,7 +128,7 @@ const CartProducts = () => {
                   <h6 className="bf-ui-ticket-row__right-column--primary-text">
                     <span className="bf-ui-rich-price bf-ui-rich-price--xxlarge">
                       <span>$</span>
-                      <span className="bf-ui-price-small">3243434</span>
+                      <span className="bf-ui-price-small">{total()}</span>
                       <span className="bf-ui-price-small-cents">15</span>
                     </span>
                   </h6>

@@ -3,8 +3,8 @@ import "./discovery.css"
 
 const Discovery = () => {
   return (
-    <div className='discovery container-fluid d-flex justify-content-center'>
-        <div className='container row'>
+    <div className='discovery'>
+        <div className='container-discovery row'>
             <div className='section-header'>
                 <h2>Descubrí</h2>
             </div>

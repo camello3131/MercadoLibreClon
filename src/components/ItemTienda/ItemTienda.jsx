@@ -5,7 +5,7 @@ const ItemTienda = ({tienda}) => {
 
   return (
     <>
-        <div className='container card-tienda-container'>
+        <div className='card-tienda-container'>
             <div className='ui-card official-stores-slide is-link'>
                 <div className='official-stores-slide-background'>
                     <img src={tienda.imgBack} alt="" />

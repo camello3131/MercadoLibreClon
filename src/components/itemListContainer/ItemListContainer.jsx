@@ -1,5 +1,4 @@
 import React from 'react'
-import { getFetch } from '../helpers/getFetch'
 import ItemList from '../itemList/ItemList'
 import { useState, useEffect } from 'react'
 import './itemListContainer.css'
@@ -9,36 +8,27 @@ import { app } from '../../firebase/config'
 
 
 const ItemListContainer = ({categoriaId}) => {
+  const [loading, setLoading] = useState(true)
+  const [products, setProduct] = useState([])
+  const [prodDb, setProdDb] = useState([])
+  const params = useParams()
 
-    const [loading, setLoading] = useState(true)
-    const [products, setProduct] = useState([])
-    const [prodDb, setProdDb] = useState([])
-    const params = useParams()
-
-    useEffect(() => {
-      const queryDB = getFirestore(app)
-      const queryCollection = collection(queryDB, "datos")
-      getDocs(queryCollection)
+  useEffect(() => {
+    const queryDB = getFirestore(app)
+    const queryCollection = collection(queryDB, "datos")
+    getDocs(queryCollection)
       .then((res) => {
         const data = res.docs.map(doc => doc.data());
         setProdDb(data);
+        setProduct(data);
+        setLoading(false);
       })
-    
-    }, [])
-    
-    console.log(prodDb)
+      .catch((error) => {
+        console.error("Error al obtener los datos:", error);
+        setLoading(false);
+      });
+  }, []); 
 
-
-  useEffect(() => {
-    getFetch()
-    .then ((res) => {
-        setProduct(res)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
-    }, [])
-    
     return (
       loading ?
         <div className='container spinner'>
@@ -48,7 +38,7 @@ const ItemListContainer = ({categoriaId}) => {
         </div>
         :
         <div className='itemList container d-flex'>
-            <ItemList products={prodDb} categoria={params.categoriaId} />
+            <ItemList products={products} categoria={params.categoriaId} />
         </div>
         )
 }

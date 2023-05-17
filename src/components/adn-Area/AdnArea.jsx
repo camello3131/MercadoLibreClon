@@ -3,7 +3,7 @@ import "./adnArea.css"
 
 const AdnArea = () => {
   return (
-    <div className='adn AD_ADN_area container'>
+    <div className='adn AD_ADN_area'>
         <div>
             <a href="">
                 <div className='adn-container'>

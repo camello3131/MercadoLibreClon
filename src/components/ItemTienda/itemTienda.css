@@ -2,16 +2,14 @@
     background-color: #fffdfd;
 }
 .card-tienda-container{
-    width: 300px;
+    width: 310px;
     position: relative;
     display: block;
     float: left;
     height: 100%;
     min-height: 1px;
 }
-
 .official-stores-slide {
-    -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%), 0 -1px 2px 0 rgb(0 0 0 / 10%);
     height: 340px;
     margin: 0 8px 20px;
@@ -30,9 +28,7 @@
 }
 .official-stores-slide-logo {
     background-color: #fff;
-    -webkit-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 0 2px 15px 0 rgb(0 0 0 / 10%);
     box-shadow: 0 2px 15px 0 rgb(0 0 0 / 10%);
     height: 80px;
     margin: 0 auto;
@@ -60,10 +56,8 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .official-stores-slide-item {
     border: 1px solid #eee;
-    -webkit-border-radius: 8px;
     border-radius: 8px;
     display: inline-block;
     height: 70px;
@@ -75,7 +69,6 @@
     height: 70px;
     width: 70px;
 }
-
 .official-stores-slide-action {
     margin-top: 22px;
     text-align: center;
@@ -89,7 +82,6 @@
 .clipped {
     clip: rect(0 0 0 0);
     border: 0;
-    -webkit-clip-path: inset(50%);
     clip-path: inset(50%);
     display: block;
     margin: 0 -1px -1px 0;
@@ -98,7 +90,6 @@
     position: absolute;
     z-index: -1;
 }
-
 .official-stores-slide.is-link {
     cursor: pointer;
 }

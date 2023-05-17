@@ -32,7 +32,6 @@ const PaysContainer = () => {
                     <a href="#">Conocé Mercado Crédito</a>
                 </div>
             </div>
-        </div>
             <div className='payment-data-section payment-data-section-normal'>
                 <a href="#" className='payment-data-icon'>
                     <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/payment-agreement.svg" alt="" />
@@ -42,10 +41,11 @@ const PaysContainer = () => {
                     <a href="#">Ver mas</a>
                 </div>
             </div>
-        <div className='payment-data-section payment-data-section-trailing'>
-            <a href="#" className='payment-data-icon'>
-                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/view-more.svg" alt="" />
-            </a>
+            <div className='payment-data-section payment-data-section-trailing'>
+                <a href="#" className='payment-data-icon'>
+                    <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/payments/view-more.svg" alt="" />
+                </a>
+            </div>
         </div>
     </div>
   )

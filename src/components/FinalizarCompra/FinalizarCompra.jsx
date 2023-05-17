@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useEffect} from 'react'
 import {useCartContext} from "../../context/Context"
-import {Link} from "react-router-dom"
 import {addDoc, collection, getFirestore} from "firebase/firestore"
 import "./finalizar.css"
 
@@ -102,7 +101,6 @@ const Cart = () =>{
   
       const terminos = document.getElementById('terminos');
       if(campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked ){
-        console.log("hola")
         const db = getFirestore()
         const orderCollection = collection(db,"orders")
     
@@ -156,13 +154,6 @@ setTimeout (()=> {
   return (
     <>
       <div className='container'>
-        <p className='tot'>
-          Total: $ {totalPrice()}
-        </p>
-        <div className='contCartVacio seguir'>
-            <Link to= "/"><button className='formulario__btn btnC'>Seguir Comprando</button></Link>
-          </div>
-
         <h4 id='tittleConfirm'>Confirma tu compra</h4>
         <div className="containerForm card">
         <div id='containerId'></div>

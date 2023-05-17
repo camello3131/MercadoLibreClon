@@ -4,6 +4,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import { getTiendas } from '../helpers/getFetch.js'
 import ItemTienda from '../ItemTienda/ItemTienda.jsx';
+import "./carouselTiendas.css"
 
 const CarouselTiendas = () => {
     const [loading, setLoading] = useState(true)
@@ -20,7 +21,6 @@ const CarouselTiendas = () => {
 
         const responsive = {
             superLargeDesktop: {
-              // the naming can be any, depends on you.
               breakpoint: { max: 4000, min: 3000 },
               items: 4,
               slidesToSlide: 3 
@@ -41,8 +41,8 @@ const CarouselTiendas = () => {
           }
   return (
     <>
-    <div className="container-all-carousel">
-        <div className='row container'>
+    <div className="container-all-carousel container-all-carousel-tiendas">
+        <div className='row'>
             <div className="section-header">
                 <h2>Las mejores tiendas te esperan</h2>
                 <a href="#">Ver Tiendas</a>

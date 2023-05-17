@@ -25,11 +25,10 @@ function App() {
         <Navbar/>
         <Routes>
         <Route path='' element={<Initial/>} />
-        <Route exact path='' element={<ItemListContainer/>} />
           <Route path='/detalle/:detalleId' element={<ItemDetailContainer/>}/>
           <Route path='categoria/:categoriaId' element={<ItemListContainer/>} />
           <Route path='/cart' element={<CartProducts/>} />
-          <Route path='/addeddata/:Id' element={<Added/>}/>
+          <Route path='/addeditem/:Id' element={<Added/>}/>
           <Route path='/session' element= {<Ingresar/>} />
           <Route path='search/:busqueda' element={<SearchListContainer/>} />
           <Route path='/finalizar-compra' element={<FinalizarCompra/>}  ></Route>

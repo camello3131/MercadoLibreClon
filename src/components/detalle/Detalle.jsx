@@ -1,14 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-const detalle = ({data}) => {
+const detalle = ({item}) => {
 
 
-  console.log(data)
+  console.log(item)
   return (
     <div>
-      <img src={data.img} alt="" />
-      <p>{data.nombre}</p>
+      <img src={item.img} alt="" />
+      <p>{item.nombre}</p>
     </div>
   )
 }

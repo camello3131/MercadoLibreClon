@@ -17,6 +17,8 @@ const Initial = () => {
     <div>
         <Carousel/>
         <PaysContainer/>
+        {/*
+        */}
         <CarouselOfertas/>
         <Beneficios/>
         <Subscriptions/>

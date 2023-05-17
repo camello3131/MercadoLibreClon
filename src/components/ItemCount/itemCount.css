@@ -3,14 +3,11 @@
     position: relative;
     width: 100%;
     max-width: 270px;
-  }
-  
-  .andes-select select {
+}
+.andes-select select {
     border: none;
     outline: none;
-    -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
@@ -23,9 +20,8 @@
     font-size: 18px;
     font-weight: 400;
     color: #333;
-  }
-  
-  .andes-select:after {
+}
+.andes-select:after {
     content: "";
     position: absolute;
     top: 50%;
@@ -35,12 +31,10 @@
     border-width: 8px 8px 0 8px;
     border-color: #666 transparent transparent transparent;
     pointer-events: none;
-  }
-
-  .ui-vip-core-container--short-description .ui-pdp-container__row--stock-information:not(:empty) {
+}
+.ui-vip-core-container--short-description .ui-pdp-container__row--stock-information:not(:empty) {
     margin-top: 24px;
 }
-
 .ui-vip-core-container--short-description .ui-pdp-container__row--available-quantity:not(:empty) {
     margin-top: 16px;
 }
@@ -55,29 +49,22 @@
     cursor: pointer;
     padding: 0;
 }
-
 .andes-button--transparent, .andes-button--transparent:focus, .andes-button--transparent:link, .andes-button--transparent:visited {
     background-color: transparent;
     border-color: transparent;
     color: #3483fa;
 }
 .andes-button--transparent {
-    -webkit-box-shadow: 0 0 0 0 #fff;
     box-shadow: 0 0 0 0 #fff;
     cursor: pointer;
-    -webkit-transition: background-color .2s ease-out,-webkit-box-shadow .25s ease-out;
     transition: background-color .2s ease-out,-webkit-box-shadow .25s ease-out;
     transition: box-shadow .25s ease-out,background-color .2s ease-out;
     transition: box-shadow .25s ease-out,background-color .2s ease-out,-webkit-box-shadow .25s ease-out;
 }
 .andes-button, .andes-button * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 .andes-button {
-    -webkit-font-smoothing: antialiased;
-    -webkit-border-radius: 6px;
     border-radius: 6px;
     display: inline-block;
     font-family: Proxima Nova,-apple-system,Roboto,Arial,sans-serif;
@@ -87,29 +74,22 @@
     line-height: 48px;
     padding: 0 24px;
     text-align: center;
-    -webkit-transition: .18s ease-out;
     transition: .18s ease-out;
-    -webkit-transition-property: background,color;
     transition-property: background,color;
     width: auto;
 }
 .ui-pdp-buybox__quantity__trigger .andes-button__content {
-    display: -webkit-flex;
     display: flex;
     max-width: 275px;
 }
-
 .andes-button__content {
     position: relative;
     top: -1px;
 }
 .andes-button__content {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
     height: 100%;
-    -webkit-justify-content: center;
     justify-content: center;
 }
 .ui-pdp-buybox__quantity__title {
@@ -138,13 +118,9 @@
 .andes-list__item--size-medium .andes-list__item-first-column {
     padding: 18px 0;
 }
-
 .andes-list__item-first-column {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-grow: 4;
     flex-grow: 4;
 }
 .ui-pdp-quantity-selector .andes-list__item.andes-list__item--selected .andes-list__item-primary {
@@ -155,7 +131,6 @@
     color: #3483fa;
     font-weight: 600;
 }
-
 .andes-list__item--size-medium .andes-list__item-primary, .andes-list__item--size-medium .andes-list__item-tertiary {
     font-size: 16px;
 }
@@ -163,5 +138,10 @@
     color: rgba(0,0,0,.9);
     display: block;
 }
-        
-  
+.ui-pdp-buybox__quantity__available{
+    font-size: 15px;
+}
+#quantity-selector{
+    font-size: 12px;
+    font-weight: bold;
+}

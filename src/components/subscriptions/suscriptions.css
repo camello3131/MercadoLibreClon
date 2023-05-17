@@ -1,14 +1,25 @@
 .slick-slider .slick-slide {
     position: relative;
 }
+.container-subs{
+}
+.container-subscriptions{
+    margin: auto;
+    min-width: 90%;
+}
 .slick-initialized .slick-slide {
     display: block;
+}
+.carousel-container-subscriptions{
+    margin: auto;
+    width: fit-content;
 }
 .slick-slide {
     display: none;
     float: left;
     height: 100%;
     min-height: 1px;
+    min-width: 400px !important;
 }
 .partners-subscriptions__slide {
     padding: 0 8px;
@@ -32,6 +43,12 @@
 .slick-slide img {
     display: block;
 }
+.partners-subscriptions__slide-logo{
+    height: 70px;
+}
+.partners-subscriptions__slide-texts-line-span{
+    font-size: 12px !important;
+}
 .partners-subscriptions__slide-background {
     display: block;
     height: 100%;
@@ -39,7 +56,6 @@
     object-fit: cover;
     -o-object-position: top;
     object-position: top;
-
     width: 100%;
 }
 .partners-subscriptions__slide-logo-text {
@@ -86,10 +102,21 @@
     object-fit: cover;
     overflow: hidden;
 }
+.partners-subscriptions__body {
+    width: 100%;
+    overflow-x: auto;
+}
+.partners-subscriptions__body {
+    overflow: hidden;
+}
+.carousel-container-subscriptions {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+}
 .partners-subscriptions__slide-texts {
     color: #fff;
 }
-
 .partners-subscriptions__slide-texts-line--benefit {
     font-size: 22px;
     font-weight: 600;
@@ -111,3 +138,4 @@
     margin-left: 16px;
     text-align: left;
 }
+

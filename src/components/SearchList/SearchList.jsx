@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import { Link, useParams } from 'react-router-dom'
-import { getFetch } from '../helpers/getFetch'
 import "./SearchList.css"
 import {getFirestore, doc, getDocs, collection } from "firebase/firestore"
 import { app } from '../../firebase/config'
@@ -81,10 +80,8 @@ const SearchList = () => {
                         <div className='carousel-container arrow-visible'>
                           <div className='slick-initialized slick-slider'>
                             <div className='slick-list'>
-                              <div className='slick-track' style={{opacity:"1", transform:"translate3d(0px 0px 0px)", width: "480px"}}>
-                                <div className='slick-slide slick-active' style={{width:"160px"}} >
-                                  <img src={prod.img} alt="" className='ui-search-result-image__element shops__image-element' width={160} height={160} />
-                                </div>
+                              <div className='slick-track' style={{opacity:"1", transform:"translate3d(0px 0px 0px)", maxWidth: "100%"}}>
+                                  <img src={prod.img} alt="" className='ui-search-result-image__element shops__image-element'/>
                               </div>
                             </div>
                           </div>

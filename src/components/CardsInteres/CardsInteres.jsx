@@ -1,9 +1,10 @@
 import React from 'react'
+import "./intereses.css"
 
 const CardsInteres = () => {
     return (
-        <div className='discovery container-fluid d-flex justify-content-center'>
-            <div className='container row'>
+        <div className='discovery interes-container'>
+            <div className='row'>
                 <div className='section-header'>
                     <h2>Te puede interesar</h2>
                 </div>

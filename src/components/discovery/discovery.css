@@ -1,10 +1,13 @@
 .section-header {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
     line-height: 1.2;
     margin-bottom: 22px;
+}
+.container-discovery{
+    margin: auto;
+    width: 90%;
+    margin-top: 45px;
 }
 section .section-header h2 {
     font-size: 26px;
@@ -14,18 +17,14 @@ section .section-header h2 {
 .discovery__body {
     padding-right: 8px;
     width: 100%;
-    display: -webkit-flex;
     display: flex;
     padding-left: 8px;
 }
 .discovery .advertising {
     width: 50%;
     background-color: #fff;
-    -webkit-border-radius: 4px;
     border-radius: 4px;
-    -webkit-box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
     box-shadow: 0 1px 1px 0 rgb(0 0 0 / 10%);
-    display: -webkit-flex;
     display: flex;
     height: 250px;
     max-width: 100%;
@@ -37,9 +36,7 @@ section .section-header h2 {
     margin-right: 15px;
 }
 .discovery .advertising__info {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
 }
 .discovery .advertising__image {
@@ -77,7 +74,6 @@ section .section-header h2 {
 .discovery .advertising__info__text--bold {
     font-weight: 600;
 }
-
 .discovery .advertising__info__text {
     color: #4b4b4b;
     font-stretch: normal;
@@ -94,31 +90,57 @@ section .section-header h2 {
     width: 96px;
 }
 .discovery .advertising__info__button {
-    -webkit-border-radius: 2px;
     border-radius: 2px;
     font-weight: 600;
     margin-top: 13px;
     padding: 9px 10px;
 }
-
 .andes-button--loud, .andes-button--loud:focus, .andes-button--loud:link, .andes-button--loud:visited {
     background-color: #3483fa;
     border-color: transparent;
     color: #fff;
 }
-
 .discovery .advertising__info {
-    -webkit-align-self: center;
     align-self: center;
-    -webkit-flex: 1 0 auto;
     flex: 1 0 auto;
     margin-right: 32px;
     padding: 32px 0 32px 32px;
 }
-
 .discovery .advertising__info {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
+}
+.advertising__image{
+    overflow: hidden;
+    height: 80px;
+}
+.advertising__image img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+.discovery__body{
+    display: flex;
+    flex-wrap: wrap;
+}
+.discovery .advertising{
+    width: 49%;
+}
+@media only screen and (max-width: 1060px){
+    .advertising__image{
+        display: none;
+   }
+}
+@media only screen and (max-width: 867px){
+    .advertising{
+        width: 100% !important;
+   }
+    .advertising__image{
+        display: block;
+   }
+}
+@media only screen and (max-width: 570px){
+    .advertising__image{
+        display: none;
+   }
 }

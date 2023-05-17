@@ -1,6 +1,4 @@
 .image-information {
-    
-    display: -webkit-flex;
     display: flex;
     margin: 24px 24px 0;
     padding-bottom: 24px;
@@ -8,23 +6,18 @@
 .image-information__asset {
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.07);
-    -webkit-border-radius: 50%;
     border-radius: 50%;
-    display: -webkit-flex;
     display: flex;
     position: relative;
     width: 100%;
 }
-
 .image-information__asset .bf-ui-image--circle {
     height: 64px;
     -o-object-fit: cover;
     object-fit: cover;
     width: 64px;
 }
-
 .bf-ui-image--circle, .bf-ui-image--circle-bordered {
-    -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 .image-information__asset .bf-ui-badge__icon {
@@ -33,28 +26,19 @@
     z-index: 1;
 }
 .image-information__content, .image-information__text {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
 }
-
 .image-information__content {
-    -webkit-flex: 1;
     flex: 1;
     margin-left: 16px;
 }
 .image-information__text {
-    -webkit-flex: 1;
     flex: 1;
-    -webkit-justify-content: center;
     justify-content: center;
 }
-
 .image-information__content, .image-information__text {
-    display: -webkit-flex;
     display: flex;
-    -webkit-flex-direction: column;
     flex-direction: column;
 }
 .image-information__title {
@@ -68,7 +52,6 @@
 }
 .bf-ui-rich-text {
     white-space: pre-wrap;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
@@ -79,10 +62,7 @@
     margin: 0;
 }
 .image-information__description {
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
     color: rgba(0,0,0,.9);
-    display: -webkit-box;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.29;
@@ -90,14 +70,11 @@
     overflow: hidden;
 }
 .information-container .bf-ui-detail-row-with-images {
-    -webkit-align-items: center;
     align-items: center;
     margin-top: 0;
     padding: 24px 24px 0;
 }
-
 .bf-ui-detail-row-with-images {
-    display: -webkit-flex;
     display: flex;
     margin: 16px 0;
     padding: 0 16px;
@@ -114,11 +91,9 @@
 }
 .bf-ui-rich-text {
     white-space: pre-wrap;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
-
 .information-container .bf-ui-detail-row-with-images__title {
     line-height: 1.59;
 }
@@ -129,14 +104,11 @@
     line-height: 1.29;
     margin: 0;
 }
-
 .bf-ui-rich-price.bf-ui-rich-price--bold {
     font-weight: 600;
 }
-
 .bf-ui-rich-price {
     white-space: nowrap;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
@@ -158,37 +130,29 @@
     vertical-align: super;
 }
 .bf-ui-detail-row-with-images__images {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
     margin: 0 0 0 auto;
     padding: 0;
 }
 .information-container .bf-ui-button-container {
-    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
 }
 .bf-ui-button-container--transparent {
     background-color: transparent;
 }
 .bf-ui-button-container--horizontal {
-    display: -webkit-flex;
     display: flex;
 }
 .bf-ui-button-container {
     margin: 24px 0 0;
     padding: 0 24px 24px;
-    width: -webkit-fill-available;
     width: -moz-available;
     width: stretch;
 }
 .bf-ui-detail-row-with-images__images {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
     margin: 0 0 0 auto;
     padding: 0;
@@ -197,14 +161,12 @@
     border: 2px solid #fff;
     position: relative;
 }
-
 .bf-ui-detail-row-with-images__image:not(:last-child) {
     margin-right: -15px;
 }
 .bf-ui-detail-row-with-images__image {
     background-color: #fff;
     border: 1px solid rgba(0,0,0,.07);
-    -webkit-border-radius: 50%;
     border-radius: 50%;
     display: block;
     height: 32px;
@@ -214,7 +176,6 @@
     list-style: none;
 }
 .bf-ui-image--circle, .bf-ui-image--circle-bordered {
-    -webkit-border-radius: 50%;
     border-radius: 50%;
 }
 .bf-ui-detail-row-with-images__image>* {
@@ -222,21 +183,15 @@
     width: 100%;
 }
 .information-container {
-    -webkit-align-items: center;
     align-items: center;
-    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
     padding: 12px 0;
 }
 .information-container .bf-ui-button-container {
-    -webkit-align-self: center;
     align-self: center;
-    -webkit-justify-content: flex-end;
     justify-content: flex-end;
     padding-right: 16px;
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
 }
@@ -245,28 +200,22 @@
     margin: 0;
     padding: 24px;
 }
-
 .information-container .bf-ui-button-container {
-    display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: space-between;
     justify-content: space-between;
 }
 .bf-ui-button-container--transparent {
     background-color: transparent;
 }
 .bf-ui-button-container--horizontal {
-    display: -webkit-flex;
     display: flex;
 }
 .bf-ui-button-container {
     margin: 24px 0 0;
     padding: 0 24px 24px;
-    width: -webkit-fill-available;
     width: -moz-available;
     width: stretch;
 }
-
 .information-container .bf-ui-button-container .bf-ui-button {
     font-size: 14px;
     padding: 0 20px;
@@ -280,19 +229,13 @@
 .bf-ui-button.andes-button {
     stroke-width: 0;
 }
-
 .bf-ui-button {
-    -webkit-box-shadow: none;
     box-shadow: none;
-    -webkit-transition: none;
     transition: none;
 }
-
 .nav-main-content .andes-button .andes-button__content {
-    display: -webkit-flex;
     display: flex;
 }
-
 .bf-ui-button.andes-button--loud .andes-button__content {
     display: inline;
     text-align: center;
@@ -300,19 +243,21 @@
 .andes-button__content {
     height: 100%;
 }
-
 .bf-ui-button.andes-button--loud .andes-button__text {
     display: inline;
     float: none;
 }
 .andes-button__text {
-    -webkit-flex: 1;
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .main-container__white {
     background-color: #fff;
+}
+@media only screen and (max-width:1100px) {
+    .information-container{
+        flex-direction: column;
+   }
 }
