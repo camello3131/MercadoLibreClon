@@ -50,7 +50,7 @@ La aplicación utiliza la API de JSON Placeholder para obtener comentarios de pr
 
 ##Imagenes
 
-![](https://ibb.co/N9wHqz7)
-![](https://ibb.co/j5vBt7s)
-![](https://ibb.co/B25tRgW)
-![](https://ibb.co/Z21r3LG)
+![](https://i.ibb.co/c6z79dx/1.png)
+![](https://i.ibb.co/b3gqtpD/2.png)
+![](https://i.ibb.co/N2dszLD/3.png)
+![](https://i.ibb.co/2ZYrwnW/4.png)
