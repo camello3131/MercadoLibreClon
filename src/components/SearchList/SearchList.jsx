@@ -29,10 +29,10 @@ const SearchList = () => {
 
   useEffect(() => {
     const result = prodDb.filter((product) => {
-      const lowerBusqueda = busqueda.toLowerCase(); // Convertir la búsqueda a minúsculas
-      const lowerNombre = product.nombre.toLowerCase(); // Convertir el nombre del producto a minúsculas
-      const lowerDescripcion = product.descripcion.toLowerCase(); // Convertir la descripción del producto a minúsculas
-      return lowerNombre.includes(lowerBusqueda) || lowerDescripcion.includes(lowerBusqueda); // Comparar en minúsculas
+      const lowerBusqueda = busqueda.toLowerCase(); 
+      const lowerNombre = product.nombre.toLowerCase(); 
+      const lowerDescripcion = product.descripcion.toLowerCase();
+      return lowerNombre.includes(lowerBusqueda) || lowerDescripcion.includes(lowerBusqueda);
     });
     setFiltrados(result);
   }, [busqueda, prodDb]);

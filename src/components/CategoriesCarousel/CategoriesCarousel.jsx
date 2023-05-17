@@ -5,9 +5,9 @@ import "./categories.css"
 
 const CategoriesCarousel = () => {
   const itemsPerRow = 7;
-  const numViews = Math.ceil(categorias.length / 14); // Calculamos el número total de vistas
+  const numViews = Math.ceil(categorias.length / 14); 
   const [startIndex, setStartIndex] = useState(0);
-  const [viewIndex, setViewIndex] = useState(0); // Agregamos el estado para el índice de la vista actual
+  const [viewIndex, setViewIndex] = useState(0); 
   const rows = [];
   let items = [];
   

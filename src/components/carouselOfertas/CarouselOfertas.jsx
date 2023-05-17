@@ -1,15 +1,6 @@
   import { useState, useEffect } from "react";
-  import { getFetch } from '../helpers/getFetch.js'
-
   import "./carouselOfertas.css";
-
   import ItemOfertas from "../ItemOfertas/ItemOfertas";
-
-  // Import Swiper React components
-  import { Swiper, SwiperSlide } from "swiper/react";
-
-  // import required modules
-  import { Pagination, Navigation } from "swiper";
   import Carousel from 'react-multi-carousel';
   import 'react-multi-carousel/lib/styles.css';
   import { getFirestore, doc, getDocs, collection } from "firebase/firestore";
