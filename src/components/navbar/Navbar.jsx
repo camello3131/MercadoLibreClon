@@ -31,7 +31,7 @@ const Navbar = () => {
             <div className='nav-lefth-top'>
                 <div className="img-container">
                     <NavLink to={"/"} className={"img-link"}>
-                        <img src="../src/assets/logo.png" className='img-logo' alt="" />
+                        <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.22.8/mercadolibre/logo__large_plus.png" className='img-logo' alt="" />
                     </NavLink>
                 </div>
             </div>
