@@ -1,4 +1,3 @@
-import React from 'react'
 import "./ItemDetal.css"
 import { useCartContext } from '../../context/Context'
 import { ItemCount } from '../ItemCount/ItemCount'
