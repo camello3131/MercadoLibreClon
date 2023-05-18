@@ -1,3 +1,4 @@
+import React from 'react'
 import "./ItemDetal.css"
 import { useCartContext } from '../../context/Context'
 import { ItemCount } from '../ItemCount/ItemCount'
@@ -6,15 +7,13 @@ import Footer from '../Footer/Footer.jsx'
 import React, { useState, useEffect } from "react";
 import Comments from "../Comments/Comments"
 
-const ItemDetail = ({item}) => {
-
-  const [imagenSeleccionada, setImagenSeleccionada] = useState(item.img)
+const ItemDetalle = ({item}) => {
+    const [imagenSeleccionada, setImagenSeleccionada] = useState(item.img)
 
     const {addToCart, cart} = useCartContext()
     function onAdd(cantidad) {
       addToCart({...item, cantidad: cantidad})
     }
-    
   return (
     <>
     <div className="container-top-detail">
@@ -568,9 +567,7 @@ const ItemDetail = ({item}) => {
       <AdnArea/>
       <Footer/>
     </>
-
-
   )
 }
 
-export default ItemDetail
+export default ItemDetalle
