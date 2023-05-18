@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {useParams} from "react-router-dom"
 import {getFirestore, doc, getDocs, collection } from "firebase/firestore"
 import { app } from '../../firebase/config'
+import ItemDetail from '../ItemDetail/ItemDetail.jsx'
 
 export const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
@@ -33,6 +34,7 @@ export const ItemDetailContainer = () => {
         </div>
       ) : (
         <div>
+          <ItemDetail item={item} ></ItemDetail>
         </div>
       )}
     </div>
