@@ -10,8 +10,6 @@ const ItemDetail = ({item}) => {
 
   const [imagenSeleccionada, setImagenSeleccionada] = useState(item.img)
 
-    /////////////////////////////////////////////////
-
     const {addToCart, cart} = useCartContext()
     function onAdd(cantidad) {
       addToCart({...item, cantidad: cantidad})

@@ -3,7 +3,7 @@ import "./itemCount.css"
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-export const ItemCount = ( {stock, initial, onAdd, item} ) => {
+export const ItemCount = ( {stock, onAdd, item} ) => {
 
 
     const [selectedQuantity, setSelectedQuantity] = useState(1);
